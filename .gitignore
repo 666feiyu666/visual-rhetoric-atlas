@@ -1,0 +1,15 @@
+/data/
+/corpus/
+/Basic Report.pdf
+/.venv/
+/.env
+/.env.local
+/.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+/build/
+/dist/
+/AGENTS.md
+docs/*

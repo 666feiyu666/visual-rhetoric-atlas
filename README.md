@@ -1,0 +1,1 @@
+Graphic Culture Atlas mines knowledge from graphic design, examining formal design principles alongside the cultural and historical layers that shape visual expression. Its Graphic Culture Cartographer agent analyzes design examples and develops traceable, context-aware interpretations.

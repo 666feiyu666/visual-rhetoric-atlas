@@ -1,0 +1,192 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "bbox": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "visible_text": {
+            "type": "string"
+          },
+          "uncertainty": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "description",
+          "location",
+          "bbox",
+          "visible_text",
+          "uncertainty"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "sign_relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "observation_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sign_vehicle": {
+            "type": "string"
+          },
+          "proposed_object": {
+            "type": "string"
+          },
+          "proposed_interpretant": {
+            "type": "string"
+          },
+          "relation_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "iconic",
+                "indexical",
+                "symbolic"
+              ]
+            }
+          },
+          "grounds": {
+            "type": "string"
+          },
+          "alternative_readings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limits": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "observation_ids",
+          "sign_vehicle",
+          "proposed_object",
+          "proposed_interpretant",
+          "relation_types",
+          "grounds",
+          "alternative_readings",
+          "limits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "candidate_insights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "observation_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "claim": {
+            "type": "string"
+          },
+          "applicability": {
+            "type": "string"
+          },
+          "limits": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "observation_ids",
+          "claim",
+          "applicability",
+          "limits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "contextual_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "earlier_claim": {
+            "type": "string"
+          },
+          "assessment": {
+            "type": "string",
+            "enum": [
+              "supported",
+              "challenged",
+              "unchanged",
+              "unresolved"
+            ]
+          },
+          "context_evidence": {
+            "type": "string"
+          },
+          "explanation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "earlier_claim",
+          "assessment",
+          "context_evidence",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "summary",
+    "observations",
+    "sign_relations",
+    "candidate_insights",
+    "contextual_updates",
+    "uncertainties",
+    "tags"
+  ],
+  "additionalProperties": false
+}
