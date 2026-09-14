@@ -15,8 +15,6 @@ The atlas builds a corpus of images and structured interpretations for later dat
 
 Barthes reads the image of a Black soldier saluting as an expression of French imperial identity. A particular person’s gesture becomes a vehicle for presenting an ideological claim about the empire as something natural and self-evident.
 
-See the [project reading note](docs/design-basis/Unpacking%20rhetorical%20meaning%E2%80%94Barthes%20and%20Peircean%20semiotics.md) for sources and discussion.
-
 **AI structured reading — illustrative output:**
 
 The following shows how an AI reading could be recorded when supplied with the image and Barthes’s analysis. It is an example of the intended format, not an actual model result.
@@ -42,5 +40,7 @@ The following shows how an AI reading could be recorded when supplied with the i
   }
 }
 ```
+
+Above is just a demo!!!
 
 As entries accumulate, the corpus will support comparisons of visual forms, sign relations, cultural assumptions, and rhetorical interpretations across images. Patterns found in these records can then be examined against the images and their sources.
