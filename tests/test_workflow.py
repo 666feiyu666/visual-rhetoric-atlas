@@ -5,9 +5,9 @@ from types import SimpleNamespace
 
 import pytest
 
-from graphic_culture_atlas.demo import DemoProvider, image_bytes, result
-from graphic_culture_atlas.records import Repository, read_json, write_json
-from graphic_culture_atlas.workflow import OpenAIProvider, execute, prepare, token, validate_result
+from visual_rhetoric_atlas.demo import DemoProvider, image_bytes, result
+from visual_rhetoric_atlas.records import Repository, read_json, write_json
+from visual_rhetoric_atlas.workflow import OpenAIProvider, execute, prepare, token, validate_result
 
 
 @pytest.fixture

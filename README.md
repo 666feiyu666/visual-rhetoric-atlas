@@ -1,1 +1,3 @@
-Graphic Culture Atlas mines knowledge from graphic design, examining formal design principles alongside the cultural and historical layers that shape visual expression. Its Graphic Culture Cartographer agent analyzes design examples and develops traceable, context-aware interpretations.
+# Visual Rhetoric Atlas
+
+A research space for studying how images address viewers. Its Visual Rhetoric Reader agent grounds provisional interpretations in visible evidence and context, drawing on Peircean semiotics while leaving claims about rhetorical effects open to human review.

@@ -1,6 +1,6 @@
 from pathlib import Path
 from streamlit.testing.v1 import AppTest
-from graphic_culture_atlas.records import Repository
+from visual_rhetoric_atlas.records import Repository
 
 APP = str(Path(__file__).parents[1] / "app.py")
 

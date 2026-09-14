@@ -3,12 +3,12 @@ from pathlib import Path
 import json
 import streamlit as st
 
-from graphic_culture_atlas.config import settings
-from graphic_culture_atlas.demo import DemoProvider, image_bytes
-from graphic_culture_atlas.records import Repository
-from graphic_culture_atlas.workflow import OpenAIProvider, execute, prepare, token
+from visual_rhetoric_atlas.config import settings
+from visual_rhetoric_atlas.demo import DemoProvider, image_bytes
+from visual_rhetoric_atlas.records import Repository
+from visual_rhetoric_atlas.workflow import OpenAIProvider, execute, prepare, token
 
-st.set_page_config(page_title="Visual Culture Cartographer", page_icon="◧", layout="wide")
+st.set_page_config(page_title="Visual Rhetoric Atlas", page_icon="◧", layout="wide")
 config = settings(Path(__file__).parent)
 repo = Repository(config["data_dir"])
 st.markdown("""
@@ -17,8 +17,8 @@ st.markdown("""
 h1 {letter-spacing: -.04em;}
 </style>
 """, unsafe_allow_html=True)
-st.caption("GRAPHIC CULTURE ATLAS  /  LOCAL RESEARCH STUDIO")
-st.title("Visual Culture Cartographer")
+st.caption("VISUAL RHETORIC ATLAS  /  LOCAL RESEARCH STUDIO")
+st.title("Visual Rhetoric Reader agent")
 st.write("Read the image. Trace the interpretation. Keep the evidence.")
 st.caption("Prototype · Model interpretations are hypotheses. Human reviews are saved separately.")
 
