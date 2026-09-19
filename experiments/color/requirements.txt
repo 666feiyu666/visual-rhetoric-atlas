@@ -1,0 +1,11 @@
+# Extraction environment
+Pylette==6.0.0
+
+# Analysis dependencies used by run_experiment.py
+numpy>=1.26.4
+Pillow>=12.2.0
+scikit-learn>=1.2
+
+# Optional notebook interface
+jupyterlab>=4.0
+

@@ -1,0 +1,3569 @@
+{
+  "experiment_id": "mucha_color_patterns_v1",
+  "patterns": [
+    {
+      "pattern_id": "pattern_001",
+      "color_family_ids": [
+        "color_01",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": true,
+        "32": true
+      },
+      "scale_role": "global_stable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_09",
+          "case_count": 53,
+          "support": 0.32515337423312884,
+          "left_to_right_probability": 0.7794117647058824,
+          "right_to_left_probability": 0.6022727272727273,
+          "jaccard": 0.5145631067961165,
+          "lift": 1.443683155080214,
+          "pmi": 0.5297541489066402
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_09",
+          "case_count": 80,
+          "support": 0.49079754601226994,
+          "left_to_right_probability": 0.898876404494382,
+          "right_to_left_probability": 0.6666666666666666,
+          "jaccard": 0.6201550387596899,
+          "lift": 1.2209737827715357,
+          "pmi": 0.28803222254352373
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_09",
+          "case_count": 105,
+          "support": 0.6441717791411042,
+          "left_to_right_probability": 0.9722222222222222,
+          "right_to_left_probability": 0.7553956834532374,
+          "jaccard": 0.7394366197183099,
+          "lift": 1.1400879296562751,
+          "pmi": 0.18914509701022442
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_002",
+      "color_family_ids": [
+        "color_01",
+        "color_07"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": true,
+        "32": true
+      },
+      "scale_role": "global_stable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_07",
+          "case_count": 37,
+          "support": 0.22699386503067484,
+          "left_to_right_probability": 0.5441176470588235,
+          "right_to_left_probability": 0.5606060606060606,
+          "jaccard": 0.38144329896907214,
+          "lift": 1.3438057040998217,
+          "pmi": 0.4263245592512344
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_07",
+          "case_count": 55,
+          "support": 0.3374233128834356,
+          "left_to_right_probability": 0.6179775280898876,
+          "right_to_left_probability": 0.6626506024096386,
+          "jaccard": 0.4700854700854701,
+          "lift": 1.2136185190199,
+          "pmi": 0.2793150054424149
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_07",
+          "case_count": 82,
+          "support": 0.5030674846625767,
+          "left_to_right_probability": 0.7592592592592593,
+          "right_to_left_probability": 0.7884615384615384,
+          "jaccard": 0.6307692307692307,
+          "lift": 1.1899928774928776,
+          "pmi": 0.2509529385446007
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_003",
+      "color_family_ids": [
+        "color_07",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": true,
+        "32": true
+      },
+      "scale_role": "mid_scale",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_10",
+          "case_count": 44,
+          "support": 0.26993865030674846,
+          "left_to_right_probability": 0.6666666666666666,
+          "right_to_left_probability": 0.41509433962264153,
+          "jaccard": 0.34375,
+          "lift": 1.0251572327044025,
+          "pmi": 0.03584519894672218
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_10",
+          "case_count": 77,
+          "support": 0.4723926380368098,
+          "left_to_right_probability": 0.927710843373494,
+          "right_to_left_probability": 0.5789473684210527,
+          "jaccard": 0.5539568345323741,
+          "lift": 1.1369689283449589,
+          "pmi": 0.1851928280778647
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_10",
+          "case_count": 103,
+          "support": 0.6319018404907976,
+          "left_to_right_probability": 0.9903846153846154,
+          "right_to_left_probability": 0.7103448275862069,
+          "jaccard": 0.7054794520547946,
+          "lift": 1.1133289124668437,
+          "pmi": 0.1548798732582696
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_004",
+      "color_family_ids": [
+        "color_05",
+        "color_06"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": true,
+        "32": true
+      },
+      "scale_role": "mid_scale",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_06",
+          "case_count": 60,
+          "support": 0.36809815950920244,
+          "left_to_right_probability": 0.5607476635514018,
+          "right_to_left_probability": 0.625,
+          "jaccard": 0.4195804195804196,
+          "lift": 0.9521028037383177,
+          "pmi": -0.07081073728270716
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_06",
+          "case_count": 101,
+          "support": 0.6196319018404908,
+          "left_to_right_probability": 0.8782608695652174,
+          "right_to_left_probability": 0.7769230769230769,
+          "jaccard": 0.7013888888888888,
+          "lift": 1.1012040133779264,
+          "pmi": 0.13908177301004251
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_06",
+          "case_count": 108,
+          "support": 0.6625766871165644,
+          "left_to_right_probability": 0.9642857142857143,
+          "right_to_left_probability": 0.7714285714285715,
+          "jaccard": 0.75,
+          "lift": 1.1227040816326528,
+          "pmi": 0.16697771739197517
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_005",
+      "color_family_ids": [
+        "color_04",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": true,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_11",
+          "case_count": 75,
+          "support": 0.4601226993865031,
+          "left_to_right_probability": 0.6818181818181818,
+          "right_to_left_probability": 0.7978723404255319,
+          "jaccard": 0.5813953488372093,
+          "lift": 1.182301740812379,
+          "pmi": 0.24159827952466137
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_11",
+          "case_count": 137,
+          "support": 0.8404907975460123,
+          "left_to_right_probability": 0.9256756756756757,
+          "right_to_left_probability": 0.9647887323943662,
+          "jaccard": 0.8954248366013072,
+          "lift": 1.0625713741910925,
+          "pmi": 0.08755975205797241
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_11",
+          "case_count": 152,
+          "support": 0.9325153374233128,
+          "left_to_right_probability": 0.9559748427672956,
+          "right_to_left_probability": 0.987012987012987,
+          "jaccard": 0.9440993788819876,
+          "lift": 1.01184350240954,
+          "pmi": 0.01698617169540614
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_006",
+      "color_family_ids": [
+        "color_10",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": true,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_10",
+          "right_family_id": "color_11",
+          "case_count": 72,
+          "support": 0.44171779141104295,
+          "left_to_right_probability": 0.6792452830188679,
+          "right_to_left_probability": 0.7659574468085106,
+          "jaccard": 0.5625,
+          "lift": 1.1778402248093134,
+          "pmi": 0.23614384943255318
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_10",
+          "right_family_id": "color_11",
+          "case_count": 122,
+          "support": 0.7484662576687117,
+          "left_to_right_probability": 0.9172932330827067,
+          "right_to_left_probability": 0.8591549295774648,
+          "jaccard": 0.7973856209150327,
+          "lift": 1.0529492745949383,
+          "pmi": 0.07443593678809245
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_10",
+          "right_family_id": "color_11",
+          "case_count": 142,
+          "support": 0.8711656441717791,
+          "left_to_right_probability": 0.9793103448275862,
+          "right_to_left_probability": 0.922077922077922,
+          "jaccard": 0.9044585987261147,
+          "lift": 1.0365427675772503,
+          "pmi": 0.0517796430259237
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_007",
+      "color_family_ids": [
+        "color_04",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": true,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_10",
+          "case_count": 83,
+          "support": 0.50920245398773,
+          "left_to_right_probability": 0.7545454545454545,
+          "right_to_left_probability": 0.7830188679245284,
+          "jaccard": 0.6240601503759399,
+          "lift": 1.1602915951972554,
+          "pmi": 0.21448741749014336
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_10",
+          "case_count": 130,
+          "support": 0.7975460122699386,
+          "left_to_right_probability": 0.8783783783783784,
+          "right_to_left_probability": 0.9774436090225563,
+          "jaccard": 0.8609271523178808,
+          "lift": 1.0765088396667344,
+          "pmi": 0.10636016612939266
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_10",
+          "case_count": 145,
+          "support": 0.8895705521472392,
+          "left_to_right_probability": 0.9119496855345912,
+          "right_to_left_probability": 1.0,
+          "jaccard": 0.9119496855345912,
+          "lift": 1.0251572327044025,
+          "pmi": 0.03584519894672218
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_008",
+      "color_family_ids": [
+        "color_03",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_09",
+          "case_count": 77,
+          "support": 0.4723926380368098,
+          "left_to_right_probability": 0.6260162601626016,
+          "right_to_left_probability": 0.875,
+          "jaccard": 0.5746268656716418,
+          "lift": 1.1595528455284554,
+          "pmi": 0.21356857094944193
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_09",
+          "case_count": 119,
+          "support": 0.7300613496932515,
+          "left_to_right_probability": 0.7531645569620253,
+          "right_to_left_probability": 0.9916666666666667,
+          "jaccard": 0.7484276729559748,
+          "lift": 1.0230485232067512,
+          "pmi": 0.03287457375339984
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_09",
+          "case_count": 139,
+          "support": 0.852760736196319,
+          "left_to_right_probability": 0.86875,
+          "right_to_left_probability": 1.0,
+          "jaccard": 0.86875,
+          "lift": 1.01875,
+          "pmi": 0.02680005934371527
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_009",
+      "color_family_ids": [
+        "color_06",
+        "color_08"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_08",
+          "case_count": 30,
+          "support": 0.18404907975460122,
+          "left_to_right_probability": 0.3125,
+          "right_to_left_probability": 0.6818181818181818,
+          "jaccard": 0.2727272727272727,
+          "lift": 1.1576704545454544,
+          "pmi": 0.21122463048114243
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_08",
+          "case_count": 70,
+          "support": 0.4294478527607362,
+          "left_to_right_probability": 0.5384615384615384,
+          "right_to_left_probability": 0.8045977011494253,
+          "jaccard": 0.47619047619047616,
+          "lift": 1.0088417329796642,
+          "pmi": 0.012699862298861426
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_08",
+          "case_count": 91,
+          "support": 0.558282208588957,
+          "left_to_right_probability": 0.65,
+          "right_to_left_probability": 0.875,
+          "jaccard": 0.5947712418300654,
+          "lift": 1.01875,
+          "pmi": 0.02680005934371527
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_010",
+      "color_family_ids": [
+        "color_03",
+        "color_08"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_08",
+          "case_count": 37,
+          "support": 0.22699386503067484,
+          "left_to_right_probability": 0.3008130081300813,
+          "right_to_left_probability": 0.8409090909090909,
+          "jaccard": 0.2846153846153846,
+          "lift": 1.1143754619364377,
+          "pmi": 0.15623539588349036
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_08",
+          "case_count": 86,
+          "support": 0.5276073619631901,
+          "left_to_right_probability": 0.5443037974683544,
+          "right_to_left_probability": 0.9885057471264368,
+          "jaccard": 0.5408805031446541,
+          "lift": 1.0197875745671467,
+          "pmi": 0.02826866490734418
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_08",
+          "case_count": 103,
+          "support": 0.6319018404907976,
+          "left_to_right_probability": 0.64375,
+          "right_to_left_probability": 0.9903846153846154,
+          "jaccard": 0.639751552795031,
+          "lift": 1.008954326923077,
+          "pmi": 0.01286086838584148
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_011",
+      "color_family_ids": [
+        "color_11",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_11",
+          "right_family_id": "color_12",
+          "case_count": 82,
+          "support": 0.5030674846625767,
+          "left_to_right_probability": 0.8723404255319149,
+          "right_to_left_probability": 0.6307692307692307,
+          "jaccard": 0.5774647887323944,
+          "lift": 1.0937806873977087,
+          "pmi": 0.12932349414306943
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_11",
+          "right_family_id": "color_12",
+          "case_count": 134,
+          "support": 0.8220858895705522,
+          "left_to_right_probability": 0.9436619718309859,
+          "right_to_left_probability": 0.8758169934640523,
+          "jaccard": 0.8322981366459627,
+          "lift": 1.0053392248918347,
+          "pmi": 0.007682382491516189
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_11",
+          "right_family_id": "color_12",
+          "case_count": 150,
+          "support": 0.9202453987730062,
+          "left_to_right_probability": 0.974025974025974,
+          "right_to_left_probability": 0.9433962264150944,
+          "jaccard": 0.9202453987730062,
+          "lift": 0.9985297721146777,
+          "pmi": -0.0021226512522983317
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_012",
+      "color_family_ids": [
+        "color_01",
+        "color_03"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_03",
+          "case_count": 56,
+          "support": 0.34355828220858897,
+          "left_to_right_probability": 0.8235294117647058,
+          "right_to_left_probability": 0.45528455284552843,
+          "jaccard": 0.4148148148148148,
+          "lift": 1.091343854615017,
+          "pmi": 0.12610572969910264
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_03",
+          "case_count": 88,
+          "support": 0.5398773006134969,
+          "left_to_right_probability": 0.9887640449438202,
+          "right_to_left_probability": 0.5569620253164557,
+          "jaccard": 0.5534591194968553,
+          "lift": 1.0200540463660932,
+          "pmi": 0.028645593724874394
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_03",
+          "case_count": 107,
+          "support": 0.656441717791411,
+          "left_to_right_probability": 0.9907407407407407,
+          "right_to_left_probability": 0.66875,
+          "jaccard": 0.6645962732919255,
+          "lift": 1.0093171296296297,
+          "pmi": 0.013379543581393732
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_013",
+      "color_family_ids": [
+        "color_04",
+        "color_07"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": true,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_07",
+          "case_count": 43,
+          "support": 0.26380368098159507,
+          "left_to_right_probability": 0.39090909090909093,
+          "right_to_left_probability": 0.6515151515151515,
+          "jaccard": 0.3233082706766917,
+          "lift": 0.965426997245179,
+          "pmi": -0.05076092394993765
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_07",
+          "case_count": 81,
+          "support": 0.49693251533742333,
+          "left_to_right_probability": 0.5472972972972973,
+          "right_to_left_probability": 0.9759036144578314,
+          "jaccard": 0.54,
+          "lift": 1.0748127645718009,
+          "pmi": 0.10408536013982793
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_07",
+          "case_count": 103,
+          "support": 0.6319018404907976,
+          "left_to_right_probability": 0.6477987421383647,
+          "right_to_left_probability": 0.9903846153846154,
+          "jaccard": 0.64375,
+          "lift": 1.0152999516207062,
+          "pmi": 0.0219060079888482
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_014",
+      "color_family_ids": [
+        "color_07",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": true
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_09",
+          "case_count": 38,
+          "support": 0.2331288343558282,
+          "left_to_right_probability": 0.5757575757575758,
+          "right_to_left_probability": 0.4318181818181818,
+          "jaccard": 0.3275862068965517,
+          "lift": 1.0664600550964187,
+          "pmi": 0.09282992967891235
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_09",
+          "case_count": 60,
+          "support": 0.36809815950920244,
+          "left_to_right_probability": 0.7228915662650602,
+          "right_to_left_probability": 0.5,
+          "jaccard": 0.4195804195804196,
+          "lift": 0.9819277108433736,
+          "pmi": -0.026311277115847045
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_09",
+          "case_count": 94,
+          "support": 0.5766871165644172,
+          "left_to_right_probability": 0.9038461538461539,
+          "right_to_left_probability": 0.6762589928057554,
+          "jaccard": 0.6308724832214765,
+          "lift": 1.0599059214167128,
+          "pmi": 0.08393621504411536
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_015",
+      "color_family_ids": [
+        "color_06",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_09",
+          "case_count": 55,
+          "support": 0.3374233128834356,
+          "left_to_right_probability": 0.5729166666666666,
+          "right_to_left_probability": 0.625,
+          "jaccard": 0.4263565891472868,
+          "lift": 1.0611979166666665,
+          "pmi": 0.08569374839728351
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_09",
+          "case_count": 99,
+          "support": 0.6073619631901841,
+          "left_to_right_probability": 0.7615384615384615,
+          "right_to_left_probability": 0.825,
+          "jaccard": 0.6556291390728477,
+          "lift": 1.0344230769230771,
+          "pmi": 0.0488263656737144
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_09",
+          "case_count": 121,
+          "support": 0.7423312883435583,
+          "left_to_right_probability": 0.8642857142857143,
+          "right_to_left_probability": 0.8705035971223022,
+          "jaccard": 0.7658227848101266,
+          "lift": 1.0135149023638235,
+          "pmi": 0.01936730183719852
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_016",
+      "color_family_ids": [
+        "color_02",
+        "color_08"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_08",
+          "case_count": 37,
+          "support": 0.22699386503067484,
+          "left_to_right_probability": 0.2846153846153846,
+          "right_to_left_probability": 0.8409090909090909,
+          "jaccard": 0.27007299270072993,
+          "lift": 1.0543706293706294,
+          "pmi": 0.07638208819427564
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_08",
+          "case_count": 81,
+          "support": 0.49693251533742333,
+          "left_to_right_probability": 0.5436241610738255,
+          "right_to_left_probability": 0.9310344827586207,
+          "jaccard": 0.5225806451612903,
+          "lift": 1.0185142328164776,
+          "pmi": 0.026466140804812268
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_08",
+          "case_count": 98,
+          "support": 0.6012269938650306,
+          "left_to_right_probability": 0.632258064516129,
+          "right_to_left_probability": 0.9423076923076923,
+          "jaccard": 0.6086956521739131,
+          "lift": 0.9909429280397023,
+          "pmi": -0.013126125069043856
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_017",
+      "color_family_ids": [
+        "color_02",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_09",
+          "case_count": 74,
+          "support": 0.4539877300613497,
+          "left_to_right_probability": 0.5692307692307692,
+          "right_to_left_probability": 0.8409090909090909,
+          "jaccard": 0.5138888888888888,
+          "lift": 1.0543706293706294,
+          "pmi": 0.07638208819427564
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_09",
+          "case_count": 111,
+          "support": 0.6809815950920245,
+          "left_to_right_probability": 0.7449664429530202,
+          "right_to_left_probability": 0.925,
+          "jaccard": 0.7025316455696202,
+          "lift": 1.0119127516778523,
+          "pmi": 0.017084904510503388
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_09",
+          "case_count": 134,
+          "support": 0.8220858895705522,
+          "left_to_right_probability": 0.864516129032258,
+          "right_to_left_probability": 0.9640287769784173,
+          "jaccard": 0.8375,
+          "lift": 1.013785100951497,
+          "pmi": 0.019751866691105326
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_018",
+      "color_family_ids": [
+        "color_03",
+        "color_05"
+      ],
+      "detected_at": {
+        "8": true,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_05",
+          "case_count": 85,
+          "support": 0.5214723926380368,
+          "left_to_right_probability": 0.6910569105691057,
+          "right_to_left_probability": 0.794392523364486,
+          "jaccard": 0.5862068965517241,
+          "lift": 1.0527315553529366,
+          "pmi": 0.07413759862839235
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_05",
+          "case_count": 112,
+          "support": 0.6871165644171779,
+          "left_to_right_probability": 0.7088607594936709,
+          "right_to_left_probability": 0.9739130434782609,
+          "jaccard": 0.6956521739130435,
+          "lift": 1.0047330764997249,
+          "pmi": 0.006812277167203593
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_05",
+          "case_count": 111,
+          "support": 0.6809815950920245,
+          "left_to_right_probability": 0.69375,
+          "right_to_left_probability": 0.9910714285714286,
+          "jaccard": 0.6894409937888198,
+          "lift": 1.0096540178571427,
+          "pmi": 0.013861003636216843
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_019",
+      "color_family_ids": [
+        "color_02",
+        "color_06"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": true,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_06",
+          "case_count": 78,
+          "support": 0.4785276073619632,
+          "left_to_right_probability": 0.6,
+          "right_to_left_probability": 0.8125,
+          "jaccard": 0.527027027027027,
+          "lift": 1.01875,
+          "pmi": 0.02680005934371527
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_06",
+          "case_count": 125,
+          "support": 0.7668711656441718,
+          "left_to_right_probability": 0.8389261744966443,
+          "right_to_left_probability": 0.9615384615384616,
+          "jaccard": 0.8116883116883117,
+          "lift": 1.0518843572534848,
+          "pmi": 0.0729761054025486
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_06",
+          "case_count": 139,
+          "support": 0.852760736196319,
+          "left_to_right_probability": 0.896774193548387,
+          "right_to_left_probability": 0.9928571428571429,
+          "jaccard": 0.8910256410256411,
+          "lift": 1.0441013824884793,
+          "pmi": 0.062261804735380996
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_020",
+      "color_family_ids": [
+        "color_06",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_12",
+          "case_count": 80,
+          "support": 0.49079754601226994,
+          "left_to_right_probability": 0.8333333333333334,
+          "right_to_left_probability": 0.6153846153846154,
+          "jaccard": 0.547945205479452,
+          "lift": 1.0448717948717947,
+          "pmi": 0.063325935368829
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_12",
+          "case_count": 125,
+          "support": 0.7668711656441718,
+          "left_to_right_probability": 0.9615384615384616,
+          "right_to_left_probability": 0.8169934640522876,
+          "jaccard": 0.7911392405063291,
+          "lift": 1.0243841126194067,
+          "pmi": 0.034756783172058194
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_12",
+          "case_count": 140,
+          "support": 0.8588957055214724,
+          "left_to_right_probability": 1.0,
+          "right_to_left_probability": 0.8805031446540881,
+          "jaccard": 0.8805031446540881,
+          "lift": 1.0251572327044025,
+          "pmi": 0.03584519894672218
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_021",
+      "color_family_ids": [
+        "color_02",
+        "color_05"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_05",
+          "case_count": 84,
+          "support": 0.5153374233128835,
+          "left_to_right_probability": 0.6461538461538462,
+          "right_to_left_probability": 0.7850467289719626,
+          "jaccard": 0.5490196078431373,
+          "lift": 0.9843278217109994,
+          "pmi": -0.022789222419763413
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_05",
+          "case_count": 109,
+          "support": 0.6687116564417178,
+          "left_to_right_probability": 0.7315436241610739,
+          "right_to_left_probability": 0.9478260869565217,
+          "jaccard": 0.7032258064516129,
+          "lift": 1.0368835716370002,
+          "pmi": 0.05225390760146696
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_05",
+          "case_count": 111,
+          "support": 0.6809815950920245,
+          "left_to_right_probability": 0.7161290322580646,
+          "right_to_left_probability": 0.9910714285714286,
+          "jaccard": 0.7115384615384616,
+          "lift": 1.0422235023041473,
+          "pmi": 0.05966469324934161
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_022",
+      "color_family_ids": [
+        "color_10",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_10",
+          "right_family_id": "color_12",
+          "case_count": 88,
+          "support": 0.5398773006134969,
+          "left_to_right_probability": 0.8301886792452831,
+          "right_to_left_probability": 0.676923076923077,
+          "jaccard": 0.5945945945945946,
+          "lift": 1.0409288824383165,
+          "pmi": 0.057871505276721254
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_10",
+          "right_family_id": "color_12",
+          "case_count": 124,
+          "support": 0.7607361963190185,
+          "left_to_right_probability": 0.9323308270676691,
+          "right_to_left_probability": 0.8104575163398693,
+          "jaccard": 0.7654320987654321,
+          "lift": 0.9932674824315693,
+          "pmi": -0.009745813575888407
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_10",
+          "right_family_id": "color_12",
+          "case_count": 141,
+          "support": 0.8650306748466258,
+          "left_to_right_probability": 0.9724137931034482,
+          "right_to_left_probability": 0.8867924528301887,
+          "jaccard": 0.8650306748466258,
+          "lift": 0.9968770331815224,
+          "pmi": -0.004512538669418744
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_023",
+      "color_family_ids": [
+        "color_05",
+        "color_08"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_08",
+          "case_count": 30,
+          "support": 0.18404907975460122,
+          "left_to_right_probability": 0.2803738317757009,
+          "right_to_left_probability": 0.6818181818181818,
+          "jaccard": 0.24793388429752067,
+          "lift": 1.0386576040781648,
+          "pmi": 0.054720144801151796
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_08",
+          "case_count": 63,
+          "support": 0.38650306748466257,
+          "left_to_right_probability": 0.5478260869565217,
+          "right_to_left_probability": 0.7241379310344828,
+          "jaccard": 0.45323741007194246,
+          "lift": 1.0263868065967015,
+          "pmi": 0.03757453093789022
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_08",
+          "case_count": 71,
+          "support": 0.43558282208588955,
+          "left_to_right_probability": 0.6339285714285714,
+          "right_to_left_probability": 0.6826923076923077,
+          "jaccard": 0.4896551724137931,
+          "lift": 0.9935611263736264,
+          "pmi": -0.00931936646293666
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_024",
+      "color_family_ids": [
+        "color_08",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_09",
+          "case_count": 21,
+          "support": 0.12883435582822086,
+          "left_to_right_probability": 0.4772727272727273,
+          "right_to_left_probability": 0.23863636363636365,
+          "jaccard": 0.1891891891891892,
+          "lift": 0.8840392561983472,
+          "pmi": -0.17781766026475648
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_09",
+          "case_count": 62,
+          "support": 0.3803680981595092,
+          "left_to_right_probability": 0.7126436781609196,
+          "right_to_left_probability": 0.5166666666666667,
+          "jaccard": 0.42758620689655175,
+          "lift": 0.9680076628352492,
+          "pmi": -0.046909626839293846
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_09",
+          "case_count": 92,
+          "support": 0.5644171779141104,
+          "left_to_right_probability": 0.8846153846153846,
+          "right_to_left_probability": 0.6618705035971223,
+          "jaccard": 0.609271523178808,
+          "lift": 1.0373547315993359,
+          "pmi": 0.052909319423490794
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_025",
+      "color_family_ids": [
+        "color_03",
+        "color_06"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_06",
+          "case_count": 75,
+          "support": 0.4601226993865031,
+          "left_to_right_probability": 0.6097560975609756,
+          "right_to_left_probability": 0.78125,
+          "jaccard": 0.5208333333333334,
+          "lift": 1.0353150406504066,
+          "pmi": 0.050069838666562484
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_06",
+          "case_count": 128,
+          "support": 0.7852760736196319,
+          "left_to_right_probability": 0.810126582278481,
+          "right_to_left_probability": 0.9846153846153847,
+          "jaccard": 0.8,
+          "lift": 1.0157740993184032,
+          "pmi": 0.02257959302552029
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_06",
+          "case_count": 138,
+          "support": 0.8466257668711656,
+          "left_to_right_probability": 0.8625,
+          "right_to_left_probability": 0.9857142857142858,
+          "jaccard": 0.8518518518518519,
+          "lift": 1.0041964285714287,
+          "pmi": 0.006041499176917925
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_026",
+      "color_family_ids": [
+        "color_01",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_10",
+          "case_count": 32,
+          "support": 0.19631901840490798,
+          "left_to_right_probability": 0.47058823529411764,
+          "right_to_left_probability": 0.3018867924528302,
+          "jaccard": 0.22535211267605634,
+          "lift": 0.7236403995560489,
+          "pmi": -0.46665514158246096
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_10",
+          "case_count": 70,
+          "support": 0.4294478527607362,
+          "left_to_right_probability": 0.7865168539325843,
+          "right_to_left_probability": 0.5263157894736842,
+          "jaccard": 0.4605263157894737,
+          "lift": 0.9639266706091072,
+          "pmi": -0.053004695291543114
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_10",
+          "case_count": 99,
+          "support": 0.6073619631901841,
+          "left_to_right_probability": 0.9166666666666666,
+          "right_to_left_probability": 0.6827586206896552,
+          "jaccard": 0.6428571428571429,
+          "lift": 1.0304597701149427,
+          "pmi": 0.04328818213228443
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_027",
+      "color_family_ids": [
+        "color_07",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_11",
+          "case_count": 37,
+          "support": 0.22699386503067484,
+          "left_to_right_probability": 0.5606060606060606,
+          "right_to_left_probability": 0.39361702127659576,
+          "jaccard": 0.3008130081300813,
+          "lift": 0.9721147646679561,
+          "pmi": -0.04080145117606356
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_11",
+          "case_count": 74,
+          "support": 0.4539877300613497,
+          "left_to_right_probability": 0.891566265060241,
+          "right_to_left_probability": 0.5211267605633803,
+          "jaccard": 0.4900662251655629,
+          "lift": 1.0234176141184457,
+          "pmi": 0.0333949690084206
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_11",
+          "case_count": 101,
+          "support": 0.6196319018404908,
+          "left_to_right_probability": 0.9711538461538461,
+          "right_to_left_probability": 0.6558441558441559,
+          "jaccard": 0.643312101910828,
+          "lift": 1.0279095904095903,
+          "pmi": 0.0397133781468786
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_028",
+      "color_family_ids": [
+        "color_05",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_09",
+          "case_count": 59,
+          "support": 0.3619631901840491,
+          "left_to_right_probability": 0.5514018691588785,
+          "right_to_left_probability": 0.6704545454545454,
+          "jaccard": 0.4338235294117647,
+          "lift": 1.0213466440101955,
+          "pmi": 0.030472598554474706
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_09",
+          "case_count": 85,
+          "support": 0.5214723926380368,
+          "left_to_right_probability": 0.7391304347826086,
+          "right_to_left_probability": 0.7083333333333334,
+          "jaccard": 0.5666666666666667,
+          "lift": 1.0039855072463768,
+          "pmi": 0.005738443815885553
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_09",
+          "case_count": 98,
+          "support": 0.6012269938650306,
+          "left_to_right_probability": 0.875,
+          "right_to_left_probability": 0.7050359712230215,
+          "jaccard": 0.6405228758169934,
+          "lift": 1.0260791366906474,
+          "pmi": 0.03714200356517416
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_029",
+      "color_family_ids": [
+        "color_05",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_12",
+          "case_count": 85,
+          "support": 0.5214723926380368,
+          "left_to_right_probability": 0.794392523364486,
+          "right_to_left_probability": 0.6538461538461539,
+          "jaccard": 0.5592105263157895,
+          "lift": 0.9960460100647017,
+          "pmi": -0.005715709060822043
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_12",
+          "case_count": 110,
+          "support": 0.6748466257668712,
+          "left_to_right_probability": 0.9565217391304348,
+          "right_to_left_probability": 0.7189542483660131,
+          "jaccard": 0.6962025316455697,
+          "lift": 1.0190394998579142,
+          "pmi": 0.027209974118710192
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_12",
+          "case_count": 112,
+          "support": 0.6871165644171779,
+          "left_to_right_probability": 1.0,
+          "right_to_left_probability": 0.7044025157232704,
+          "jaccard": 0.7044025157232704,
+          "lift": 1.0251572327044025,
+          "pmi": 0.03584519894672218
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_030",
+      "color_family_ids": [
+        "color_02",
+        "color_03"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_03",
+          "case_count": 96,
+          "support": 0.588957055214724,
+          "left_to_right_probability": 0.7384615384615385,
+          "right_to_left_probability": 0.7804878048780488,
+          "jaccard": 0.6114649681528662,
+          "lift": 0.978611632270169,
+          "pmi": -0.031191663415460424
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_03",
+          "case_count": 147,
+          "support": 0.901840490797546,
+          "left_to_right_probability": 0.9865771812080537,
+          "right_to_left_probability": 0.930379746835443,
+          "jaccard": 0.91875,
+          "lift": 1.0177979780817263,
+          "pmi": 0.025451230428177544
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_03",
+          "case_count": 154,
+          "support": 0.9447852760736196,
+          "left_to_right_probability": 0.9935483870967742,
+          "right_to_left_probability": 0.9625,
+          "jaccard": 0.9565217391304348,
+          "lift": 1.0121774193548387,
+          "pmi": 0.01746219476437905
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_031",
+      "color_family_ids": [
+        "color_04",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_12",
+          "case_count": 89,
+          "support": 0.5460122699386503,
+          "left_to_right_probability": 0.8090909090909091,
+          "right_to_left_probability": 0.6846153846153846,
+          "jaccard": 0.5894039735099338,
+          "lift": 1.0144755244755246,
+          "pmi": 0.020734058644361345
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_12",
+          "case_count": 140,
+          "support": 0.8588957055214724,
+          "left_to_right_probability": 0.9459459459459459,
+          "right_to_left_probability": 0.9150326797385621,
+          "jaccard": 0.8695652173913043,
+          "lift": 1.0077724783607136,
+          "pmi": 0.011169962854442373
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_12",
+          "case_count": 155,
+          "support": 0.950920245398773,
+          "left_to_right_probability": 0.9748427672955975,
+          "right_to_left_probability": 0.9748427672955975,
+          "jaccard": 0.950920245398773,
+          "lift": 0.9993671136426565,
+          "pmi": -0.0009133510633956523
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_032",
+      "color_family_ids": [
+        "color_01",
+        "color_02"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_02",
+          "case_count": 55,
+          "support": 0.3374233128834356,
+          "left_to_right_probability": 0.8088235294117647,
+          "right_to_left_probability": 0.4230769230769231,
+          "jaccard": 0.38461538461538464,
+          "lift": 1.0141402714932128,
+          "pmi": 0.020257213476943484
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_02",
+          "case_count": 81,
+          "support": 0.49693251533742333,
+          "left_to_right_probability": 0.9101123595505618,
+          "right_to_left_probability": 0.5436241610738255,
+          "jaccard": 0.5159235668789809,
+          "lift": 0.9956262725284669,
+          "pmi": -0.006323794312857073
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_02",
+          "case_count": 101,
+          "support": 0.6196319018404908,
+          "left_to_right_probability": 0.9351851851851852,
+          "right_to_left_probability": 0.6516129032258065,
+          "jaccard": 0.6234567901234568,
+          "lift": 0.983452807646356,
+          "pmi": -0.024072270454833847
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_033",
+      "color_family_ids": [
+        "color_09",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_12",
+          "case_count": 63,
+          "support": 0.38650306748466257,
+          "left_to_right_probability": 0.7159090909090909,
+          "right_to_left_probability": 0.4846153846153846,
+          "jaccard": 0.4064516129032258,
+          "lift": 0.8976398601398602,
+          "pmi": -0.15579135393475765
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_12",
+          "case_count": 114,
+          "support": 0.6993865030674846,
+          "left_to_right_probability": 0.95,
+          "right_to_left_probability": 0.7450980392156863,
+          "jaccard": 0.7169811320754716,
+          "lift": 1.0120915032679738,
+          "pmi": 0.017339730094648866
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_12",
+          "case_count": 136,
+          "support": 0.8343558282208589,
+          "left_to_right_probability": 0.9784172661870504,
+          "right_to_left_probability": 0.8553459119496856,
+          "jaccard": 0.8395061728395061,
+          "lift": 1.0030315370345233,
+          "pmi": 0.004366967473554136
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_034",
+      "color_family_ids": [
+        "color_02",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_12",
+          "case_count": 102,
+          "support": 0.6257668711656442,
+          "left_to_right_probability": 0.7846153846153846,
+          "right_to_left_probability": 0.7846153846153846,
+          "jaccard": 0.6455696202531646,
+          "lift": 0.9837869822485209,
+          "pmi": -0.023582129854335592
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_12",
+          "case_count": 141,
+          "support": 0.8650306748466258,
+          "left_to_right_probability": 0.9463087248322147,
+          "right_to_left_probability": 0.9215686274509803,
+          "jaccard": 0.8757763975155279,
+          "lift": 1.0081589682853005,
+          "pmi": 0.011723143475057473
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_12",
+          "case_count": 153,
+          "support": 0.9386503067484663,
+          "left_to_right_probability": 0.9870967741935484,
+          "right_to_left_probability": 0.9622641509433962,
+          "jaccard": 0.9503105590062112,
+          "lift": 1.0119293974437005,
+          "pmi": 0.0171086363651363
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_035",
+      "color_family_ids": [
+        "color_01",
+        "color_05"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_05",
+          "case_count": 42,
+          "support": 0.25766871165644173,
+          "left_to_right_probability": 0.6176470588235294,
+          "right_to_left_probability": 0.3925233644859813,
+          "jaccard": 0.3157894736842105,
+          "lift": 0.9409015942825729,
+          "pmi": -0.0878842506416484
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_05",
+          "case_count": 63,
+          "support": 0.38650306748466257,
+          "left_to_right_probability": 0.7078651685393258,
+          "right_to_left_probability": 0.5478260869565217,
+          "jaccard": 0.44680851063829785,
+          "lift": 1.0033219345383488,
+          "pmi": 0.004784595820221096
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_05",
+          "case_count": 75,
+          "support": 0.4601226993865031,
+          "left_to_right_probability": 0.6944444444444444,
+          "right_to_left_probability": 0.6696428571428571,
+          "jaccard": 0.5172413793103449,
+          "lift": 1.0106646825396826,
+          "pmi": 0.015304420505885803
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_036",
+      "color_family_ids": [
+        "color_07",
+        "color_08"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_08",
+          "case_count": 15,
+          "support": 0.09202453987730061,
+          "left_to_right_probability": 0.22727272727272727,
+          "right_to_left_probability": 0.3409090909090909,
+          "jaccard": 0.15789473684210525,
+          "lift": 0.8419421487603306,
+          "pmi": -0.2482069881561546
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_08",
+          "case_count": 41,
+          "support": 0.25153374233128833,
+          "left_to_right_probability": 0.4939759036144578,
+          "right_to_left_probability": 0.47126436781609193,
+          "jaccard": 0.3178294573643411,
+          "lift": 0.9254950837834095,
+          "pmi": -0.11170276834649182
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_08",
+          "case_count": 67,
+          "support": 0.4110429447852761,
+          "left_to_right_probability": 0.6442307692307693,
+          "right_to_left_probability": 0.6442307692307693,
+          "jaccard": 0.475177304964539,
+          "lift": 1.0097078402366866,
+          "pmi": 0.01393790840666594
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_037",
+      "color_family_ids": [
+        "color_03",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_12",
+          "case_count": 91,
+          "support": 0.558282208588957,
+          "left_to_right_probability": 0.7398373983739838,
+          "right_to_left_probability": 0.7,
+          "jaccard": 0.5617283950617284,
+          "lift": 0.9276422764227643,
+          "pmi": -0.10835952393792044
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_12",
+          "case_count": 149,
+          "support": 0.9141104294478528,
+          "left_to_right_probability": 0.9430379746835443,
+          "right_to_left_probability": 0.9738562091503268,
+          "jaccard": 0.9197530864197531,
+          "lift": 1.0046744436171093,
+          "pmi": 0.006728083823484493
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_12",
+          "case_count": 157,
+          "support": 0.9631901840490797,
+          "left_to_right_probability": 0.98125,
+          "right_to_left_probability": 0.9874213836477987,
+          "jaccard": 0.9691358024691358,
+          "lift": 1.005935534591195,
+          "pmi": 0.00853785295098674
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_038",
+      "color_family_ids": [
+        "color_09",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_10",
+          "case_count": 48,
+          "support": 0.294478527607362,
+          "left_to_right_probability": 0.5454545454545454,
+          "right_to_left_probability": 0.4528301886792453,
+          "jaccard": 0.3287671232876712,
+          "lift": 0.8387650085763294,
+          "pmi": -0.25366141824826255
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_10",
+          "case_count": 94,
+          "support": 0.5766871165644172,
+          "left_to_right_probability": 0.7833333333333333,
+          "right_to_left_probability": 0.706766917293233,
+          "jaccard": 0.5911949685534591,
+          "lift": 0.9600250626566417,
+          "pmi": -0.0588560252009931
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_10",
+          "case_count": 124,
+          "support": 0.7607361963190185,
+          "left_to_right_probability": 0.8920863309352518,
+          "right_to_left_probability": 0.8551724137931035,
+          "jaccard": 0.775,
+          "lift": 1.002828082361697,
+          "pmi": 0.00407430187951118
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_039",
+      "color_family_ids": [
+        "color_01",
+        "color_06"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_06",
+          "case_count": 34,
+          "support": 0.2085889570552147,
+          "left_to_right_probability": 0.5,
+          "right_to_left_probability": 0.3541666666666667,
+          "jaccard": 0.26153846153846155,
+          "lift": 0.8489583333333333,
+          "pmi": -0.23623434649007877
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_06",
+          "case_count": 68,
+          "support": 0.4171779141104294,
+          "left_to_right_probability": 0.7640449438202247,
+          "right_to_left_probability": 0.5230769230769231,
+          "jaccard": 0.4503311258278146,
+          "lift": 0.9579948141745896,
+          "pmi": -0.06191024851343501
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_06",
+          "case_count": 93,
+          "support": 0.5705521472392638,
+          "left_to_right_probability": 0.8611111111111112,
+          "right_to_left_probability": 0.6642857142857143,
+          "jaccard": 0.6,
+          "lift": 1.002579365079365,
+          "pmi": 0.00371644623067393
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_040",
+      "color_family_ids": [
+        "color_02",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_11",
+          "case_count": 74,
+          "support": 0.4539877300613497,
+          "left_to_right_probability": 0.5692307692307692,
+          "right_to_left_probability": 0.7872340425531915,
+          "jaccard": 0.49333333333333335,
+          "lift": 0.9870703764320785,
+          "pmi": -0.018775144846064618
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_11",
+          "case_count": 130,
+          "support": 0.7975460122699386,
+          "left_to_right_probability": 0.87248322147651,
+          "right_to_left_probability": 0.9154929577464789,
+          "jaccard": 0.8074534161490683,
+          "lift": 1.0015124302864165,
+          "pmi": 0.002180327292688384
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_11",
+          "case_count": 146,
+          "support": 0.8957055214723927,
+          "left_to_right_probability": 0.9419354838709677,
+          "right_to_left_probability": 0.948051948051948,
+          "jaccard": 0.8957055214723927,
+          "lift": 0.9969836614997907,
+          "pmi": -0.004358232858043932
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_041",
+      "color_family_ids": [
+        "color_01",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_11",
+          "case_count": 22,
+          "support": 0.13496932515337423,
+          "left_to_right_probability": 0.3235294117647059,
+          "right_to_left_probability": 0.23404255319148937,
+          "jaccard": 0.15714285714285714,
+          "lift": 0.5610137672090113,
+          "pmi": -0.8338919200596019
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_11",
+          "case_count": 72,
+          "support": 0.44171779141104295,
+          "left_to_right_probability": 0.8089887640449438,
+          "right_to_left_probability": 0.5070422535211268,
+          "jaccard": 0.4528301886792453,
+          "lift": 0.9286279474600413,
+          "pmi": -0.10682739479768967
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_11",
+          "case_count": 102,
+          "support": 0.6257668711656442,
+          "left_to_right_probability": 0.9444444444444444,
+          "right_to_left_probability": 0.6623376623376623,
+          "jaccard": 0.6375,
+          "lift": 0.9996392496392498,
+          "pmi": -0.0005205466557965745
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_042",
+      "color_family_ids": [
+        "color_03",
+        "color_04"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_04",
+          "case_count": 76,
+          "support": 0.4662576687116564,
+          "left_to_right_probability": 0.6178861788617886,
+          "right_to_left_probability": 0.6909090909090909,
+          "jaccard": 0.4840764331210191,
+          "lift": 0.9155949741315594,
+          "pmi": -0.12721855118923653
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_04",
+          "case_count": 143,
+          "support": 0.8773006134969326,
+          "left_to_right_probability": 0.9050632911392406,
+          "right_to_left_probability": 0.9662162162162162,
+          "jaccard": 0.8773006134969326,
+          "lift": 0.9967926787547042,
+          "pmi": -0.004634622796585506
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_04",
+          "case_count": 156,
+          "support": 0.9570552147239264,
+          "left_to_right_probability": 0.975,
+          "right_to_left_probability": 0.9811320754716981,
+          "jaccard": 0.9570552147239264,
+          "lift": 0.9995283018867925,
+          "pmi": -0.0006806770783916938
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_043",
+      "color_family_ids": [
+        "color_03",
+        "color_07"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_07",
+          "case_count": 45,
+          "support": 0.27607361963190186,
+          "left_to_right_probability": 0.36585365853658536,
+          "right_to_left_probability": 0.6818181818181818,
+          "jaccard": 0.3125,
+          "lift": 0.9035476718403548,
+          "pmi": -0.14632737413694102
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_07",
+          "case_count": 80,
+          "support": 0.49079754601226994,
+          "left_to_right_probability": 0.5063291139240507,
+          "right_to_left_probability": 0.963855421686747,
+          "jaccard": 0.4968944099378882,
+          "lift": 0.9943571755375935,
+          "pmi": -0.008163930405587641
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_07",
+          "case_count": 102,
+          "support": 0.6257668711656442,
+          "left_to_right_probability": 0.6375,
+          "right_to_left_probability": 0.9807692307692307,
+          "jaccard": 0.6296296296296297,
+          "lift": 0.999158653846154,
+          "pmi": -0.0012143168258811612
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_044",
+      "color_family_ids": [
+        "color_03",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_11",
+          "case_count": 59,
+          "support": 0.3619631901840491,
+          "left_to_right_probability": 0.4796747967479675,
+          "right_to_left_probability": 0.6276595744680851,
+          "jaccard": 0.37341772151898733,
+          "lift": 0.8317765092544543,
+          "pmi": -0.2657321534239583
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_11",
+          "case_count": 137,
+          "support": 0.8404907975460123,
+          "left_to_right_probability": 0.8670886075949367,
+          "right_to_left_probability": 0.9647887323943662,
+          "jaccard": 0.8404907975460123,
+          "lift": 0.9953200213941881,
+          "pmi": -0.006767630490180488
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_11",
+          "case_count": 151,
+          "support": 0.9263803680981595,
+          "left_to_right_probability": 0.94375,
+          "right_to_left_probability": 0.9805194805194806,
+          "jaccard": 0.9263803680981595,
+          "lift": 0.9989042207792207,
+          "pmi": -0.0015817420261073707
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_045",
+      "color_family_ids": [
+        "color_02",
+        "color_04"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_04",
+          "case_count": 84,
+          "support": 0.5153374233128835,
+          "left_to_right_probability": 0.6461538461538462,
+          "right_to_left_probability": 0.7636363636363637,
+          "jaccard": 0.5384615384615384,
+          "lift": 0.9574825174825177,
+          "pmi": -0.062681949543276
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_04",
+          "case_count": 134,
+          "support": 0.8220858895705522,
+          "left_to_right_probability": 0.8993288590604027,
+          "right_to_left_probability": 0.9054054054054054,
+          "jaccard": 0.8220858895705522,
+          "lift": 0.9904770542354435,
+          "pmi": -0.013804541402261332
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_04",
+          "case_count": 151,
+          "support": 0.9263803680981595,
+          "left_to_right_probability": 0.9741935483870968,
+          "right_to_left_probability": 0.949685534591195,
+          "jaccard": 0.9263803680981595,
+          "lift": 0.9987015621829985,
+          "pmi": -0.0018744670024365044
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_046",
+      "color_family_ids": [
+        "color_06",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_11",
+          "case_count": 51,
+          "support": 0.3128834355828221,
+          "left_to_right_probability": 0.53125,
+          "right_to_left_probability": 0.5425531914893617,
+          "jaccard": 0.3669064748201439,
+          "lift": 0.9212101063829787,
+          "pmi": -0.1183978561962204
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_11",
+          "case_count": 113,
+          "support": 0.6932515337423313,
+          "left_to_right_probability": 0.8692307692307693,
+          "right_to_left_probability": 0.795774647887324,
+          "jaccard": 0.710691823899371,
+          "lift": 0.9977789815817986,
+          "pmi": -0.0032078158868711934
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_11",
+          "case_count": 131,
+          "support": 0.803680981595092,
+          "left_to_right_probability": 0.9357142857142857,
+          "right_to_left_probability": 0.8506493506493507,
+          "jaccard": 0.803680981595092,
+          "lift": 0.9903988868274582,
+          "pmi": -0.01391840187134
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_047",
+      "color_family_ids": [
+        "color_03",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_10",
+          "case_count": 74,
+          "support": 0.4539877300613497,
+          "left_to_right_probability": 0.6016260162601627,
+          "right_to_left_probability": 0.6981132075471698,
+          "jaccard": 0.4774193548387097,
+          "lift": 0.9251418929283632,
+          "pmi": -0.11225344004241172
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_10",
+          "case_count": 128,
+          "support": 0.7852760736196319,
+          "left_to_right_probability": 0.810126582278481,
+          "right_to_left_probability": 0.9624060150375939,
+          "jaccard": 0.7852760736196319,
+          "lift": 0.9928619015894167,
+          "pmi": -0.010335029447214837
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_03",
+          "right_family_id": "color_10",
+          "case_count": 142,
+          "support": 0.8711656441717791,
+          "left_to_right_probability": 0.8875,
+          "right_to_left_probability": 0.9793103448275862,
+          "jaccard": 0.8711656441717791,
+          "lift": 0.9976724137931035,
+          "pmi": -0.003361911166537197
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_048",
+      "color_family_ids": [
+        "color_01",
+        "color_04"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_04",
+          "case_count": 32,
+          "support": 0.19631901840490798,
+          "left_to_right_probability": 0.47058823529411764,
+          "right_to_left_probability": 0.2909090909090909,
+          "jaccard": 0.2191780821917808,
+          "lift": 0.6973262032085562,
+          "pmi": -0.5200944005439213
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_04",
+          "case_count": 78,
+          "support": 0.4785276073619632,
+          "left_to_right_probability": 0.8764044943820225,
+          "right_to_left_probability": 0.527027027027027,
+          "jaccard": 0.49056603773584906,
+          "lift": 0.9652292742180384,
+          "pmi": -0.05105642350202145
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_04",
+          "case_count": 105,
+          "support": 0.6441717791411042,
+          "left_to_right_probability": 0.9722222222222222,
+          "right_to_left_probability": 0.660377358490566,
+          "jaccard": 0.6481481481481481,
+          "lift": 0.9966806429070579,
+          "pmi": -0.004796785550623813
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_049",
+      "color_family_ids": [
+        "color_01",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_12",
+          "case_count": 46,
+          "support": 0.2822085889570552,
+          "left_to_right_probability": 0.6764705882352942,
+          "right_to_left_probability": 0.35384615384615387,
+          "jaccard": 0.3026315789473684,
+          "lift": 0.8481900452488688,
+          "pmi": -0.2375405439907035
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_12",
+          "case_count": 82,
+          "support": 0.5030674846625767,
+          "left_to_right_probability": 0.9213483146067416,
+          "right_to_left_probability": 0.5359477124183006,
+          "jaccard": 0.5125,
+          "lift": 0.9815671586986854,
+          "pmi": -0.026841114809888406
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_12",
+          "case_count": 105,
+          "support": 0.6441717791411042,
+          "left_to_right_probability": 0.9722222222222222,
+          "right_to_left_probability": 0.660377358490566,
+          "jaccard": 0.6481481481481481,
+          "lift": 0.9966806429070579,
+          "pmi": -0.004796785550623813
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_050",
+      "color_family_ids": [
+        "color_04",
+        "color_06"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_06",
+          "case_count": 60,
+          "support": 0.36809815950920244,
+          "left_to_right_probability": 0.5454545454545454,
+          "right_to_left_probability": 0.625,
+          "jaccard": 0.410958904109589,
+          "lift": 0.9261363636363636,
+          "pmi": -0.11070346440621968
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_06",
+          "case_count": 115,
+          "support": 0.7055214723926381,
+          "left_to_right_probability": 0.777027027027027,
+          "right_to_left_probability": 0.8846153846153846,
+          "jaccard": 0.7055214723926381,
+          "lift": 0.9742723492723494,
+          "pmi": -0.037602973481951324
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_06",
+          "case_count": 136,
+          "support": 0.8343558282208589,
+          "left_to_right_probability": 0.8553459119496856,
+          "right_to_left_probability": 0.9714285714285714,
+          "jaccard": 0.8343558282208589,
+          "lift": 0.9958670260557051,
+          "pmi": -0.005974976747905153
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_051",
+      "color_family_ids": [
+        "color_04",
+        "color_09"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_09",
+          "case_count": 42,
+          "support": 0.25766871165644173,
+          "left_to_right_probability": 0.38181818181818183,
+          "right_to_left_probability": 0.4772727272727273,
+          "jaccard": 0.2692307692307692,
+          "lift": 0.7072314049586778,
+          "pmi": -0.4997457551521189
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_09",
+          "case_count": 105,
+          "support": 0.6441717791411042,
+          "left_to_right_probability": 0.7094594594594594,
+          "right_to_left_probability": 0.875,
+          "jaccard": 0.6441717791411042,
+          "lift": 0.9636824324324325,
+          "pmi": -0.053370289340268086
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_09",
+          "case_count": 135,
+          "support": 0.8282208588957055,
+          "left_to_right_probability": 0.8490566037735849,
+          "right_to_left_probability": 0.9712230215827338,
+          "jaccard": 0.8282208588957055,
+          "lift": 0.9956563051445636,
+          "pmi": -0.006280276725954335
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_052",
+      "color_family_ids": [
+        "color_08",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_12",
+          "case_count": 26,
+          "support": 0.15950920245398773,
+          "left_to_right_probability": 0.5909090909090909,
+          "right_to_left_probability": 0.2,
+          "jaccard": 0.17567567567567569,
+          "lift": 0.740909090909091,
+          "pmi": -0.43263155929358194
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_12",
+          "case_count": 78,
+          "support": 0.4785276073619632,
+          "left_to_right_probability": 0.896551724137931,
+          "right_to_left_probability": 0.5098039215686274,
+          "jaccard": 0.48148148148148145,
+          "lift": 0.955149876042371,
+          "pmi": -0.06620096544805412
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_12",
+          "case_count": 101,
+          "support": 0.6196319018404908,
+          "left_to_right_probability": 0.9711538461538461,
+          "right_to_left_probability": 0.6352201257861635,
+          "jaccard": 0.6234567901234568,
+          "lift": 0.9955853894533139,
+          "pmi": -0.006383036442575388
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_053",
+      "color_family_ids": [
+        "color_02",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_10",
+          "case_count": 77,
+          "support": 0.4723926380368098,
+          "left_to_right_probability": 0.5923076923076923,
+          "right_to_left_probability": 0.7264150943396226,
+          "jaccard": 0.48427672955974843,
+          "lift": 0.9108127721335268,
+          "pmi": -0.13477357266567477
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_10",
+          "case_count": 120,
+          "support": 0.7361963190184049,
+          "left_to_right_probability": 0.8053691275167785,
+          "right_to_left_probability": 0.9022556390977443,
+          "jaccard": 0.7407407407407407,
+          "lift": 0.9870313367310893,
+          "pmi": -0.018832206123755284
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_10",
+          "case_count": 137,
+          "support": 0.8404907975460123,
+          "left_to_right_probability": 0.8838709677419355,
+          "right_to_left_probability": 0.9448275862068966,
+          "jaccard": 0.8404907975460123,
+          "lift": 0.9935928809788656,
+          "pmi": -0.009273258097567539
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_054",
+      "color_family_ids": [
+        "color_09",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_11",
+          "case_count": 25,
+          "support": 0.15337423312883436,
+          "left_to_right_probability": 0.2840909090909091,
+          "right_to_left_probability": 0.26595744680851063,
+          "jaccard": 0.1592356687898089,
+          "lift": 0.4926257253384913,
+          "pmi": -1.0214361263091323
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_11",
+          "case_count": 99,
+          "support": 0.6073619631901841,
+          "left_to_right_probability": 0.825,
+          "right_to_left_probability": 0.6971830985915493,
+          "jaccard": 0.6073619631901841,
+          "lift": 0.9470070422535213,
+          "pmi": -0.07855294080251318
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_09",
+          "right_family_id": "color_11",
+          "case_count": 130,
+          "support": 0.7975460122699386,
+          "left_to_right_probability": 0.935251798561151,
+          "right_to_left_probability": 0.8441558441558441,
+          "jaccard": 0.7975460122699386,
+          "lift": 0.9899093712043352,
+          "pmi": -0.014631646158876785
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_055",
+      "color_family_ids": [
+        "color_04",
+        "color_05"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_05",
+          "case_count": 67,
+          "support": 0.4110429447852761,
+          "left_to_right_probability": 0.6090909090909091,
+          "right_to_left_probability": 0.6261682242990654,
+          "jaccard": 0.44666666666666666,
+          "lift": 0.9278674596431606,
+          "pmi": -0.10800935523695647
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_05",
+          "case_count": 102,
+          "support": 0.6257668711656442,
+          "left_to_right_probability": 0.6891891891891891,
+          "right_to_left_probability": 0.8869565217391304,
+          "jaccard": 0.6335403726708074,
+          "lift": 0.9768507638072856,
+          "pmi": -0.03378992037075172
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_05",
+          "case_count": 108,
+          "support": 0.6625766871165644,
+          "left_to_right_probability": 0.6792452830188679,
+          "right_to_left_probability": 0.9642857142857143,
+          "jaccard": 0.6625766871165644,
+          "lift": 0.9885444743935308,
+          "pmi": -0.016622220947413703
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_056",
+      "color_family_ids": [
+        "color_04",
+        "color_08"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_08",
+          "case_count": 26,
+          "support": 0.15950920245398773,
+          "left_to_right_probability": 0.23636363636363636,
+          "right_to_left_probability": 0.5909090909090909,
+          "jaccard": 0.203125,
+          "lift": 0.8756198347107439,
+          "pmi": -0.19162345978978698
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_08",
+          "case_count": 76,
+          "support": 0.4662576687116564,
+          "left_to_right_probability": 0.5135135135135135,
+          "right_to_left_probability": 0.8735632183908046,
+          "jaccard": 0.4779874213836478,
+          "lift": 0.9621000310655482,
+          "pmi": -0.0557411938030152
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_04",
+          "right_family_id": "color_08",
+          "case_count": 100,
+          "support": 0.6134969325153374,
+          "left_to_right_probability": 0.6289308176100629,
+          "right_to_left_probability": 0.9615384615384616,
+          "jaccard": 0.6134969325153374,
+          "lift": 0.9857281083696178,
+          "pmi": -0.02073832941964532
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_057",
+      "color_family_ids": [
+        "color_07",
+        "color_12"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_12",
+          "case_count": 46,
+          "support": 0.2822085889570552,
+          "left_to_right_probability": 0.696969696969697,
+          "right_to_left_probability": 0.35384615384615387,
+          "jaccard": 0.30666666666666664,
+          "lift": 0.8738927738927739,
+          "pmi": -0.19447182209881755
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_12",
+          "case_count": 75,
+          "support": 0.4601226993865031,
+          "left_to_right_probability": 0.9036144578313253,
+          "right_to_left_probability": 0.49019607843137253,
+          "jaccard": 0.4658385093167702,
+          "lift": 0.9626742263170329,
+          "pmi": -0.054880429312617975
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_07",
+          "right_family_id": "color_12",
+          "case_count": 100,
+          "support": 0.6134969325153374,
+          "left_to_right_probability": 0.9615384615384616,
+          "right_to_left_probability": 0.6289308176100629,
+          "jaccard": 0.6134969325153374,
+          "lift": 0.9857281083696178,
+          "pmi": -0.02073832941964532
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_058",
+      "color_family_ids": [
+        "color_06",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_10",
+          "case_count": 52,
+          "support": 0.31901840490797545,
+          "left_to_right_probability": 0.5416666666666666,
+          "right_to_left_probability": 0.49056603773584906,
+          "jaccard": 0.3466666666666667,
+          "lift": 0.832940251572327,
+          "pmi": -0.26371508291218576
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_10",
+          "case_count": 102,
+          "support": 0.6257668711656442,
+          "left_to_right_probability": 0.7846153846153846,
+          "right_to_left_probability": 0.7669172932330827,
+          "jaccard": 0.6335403726708074,
+          "lift": 0.961596298438404,
+          "pmi": -0.05649675232707053
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_10",
+          "case_count": 122,
+          "support": 0.7484662576687117,
+          "left_to_right_probability": 0.8714285714285714,
+          "right_to_left_probability": 0.8413793103448276,
+          "jaccard": 0.7484662576687117,
+          "lift": 0.9796059113300493,
+          "pmi": -0.029726615165937095
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_059",
+      "color_family_ids": [
+        "color_05",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_11",
+          "case_count": 59,
+          "support": 0.3619631901840491,
+          "left_to_right_probability": 0.5514018691588785,
+          "right_to_left_probability": 0.6276595744680851,
+          "jaccard": 0.4154929577464789,
+          "lift": 0.9561543050308212,
+          "pmi": -0.06468463448586553
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_11",
+          "case_count": 98,
+          "support": 0.6012269938650306,
+          "left_to_right_probability": 0.8521739130434782,
+          "right_to_left_probability": 0.6901408450704225,
+          "jaccard": 0.6163522012578616,
+          "lift": 0.9781996325780772,
+          "pmi": -0.03179917210277148
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_11",
+          "case_count": 103,
+          "support": 0.6319018404907976,
+          "left_to_right_probability": 0.9196428571428571,
+          "right_to_left_probability": 0.6688311688311688,
+          "jaccard": 0.6319018404907976,
+          "lift": 0.9733882189239331,
+          "pmi": -0.03891278133820966
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_060",
+      "color_family_ids": [
+        "color_08",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_10",
+          "case_count": 22,
+          "support": 0.13496932515337423,
+          "left_to_right_probability": 0.5,
+          "right_to_left_probability": 0.20754716981132076,
+          "jaccard": 0.171875,
+          "lift": 0.7688679245283019,
+          "pmi": -0.37919230033212165
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_10",
+          "case_count": 69,
+          "support": 0.4233128834355828,
+          "left_to_right_probability": 0.7931034482758621,
+          "right_to_left_probability": 0.518796992481203,
+          "jaccard": 0.45695364238410596,
+          "lift": 0.9719989629245528,
+          "pmi": -0.040973320340671256
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_10",
+          "case_count": 90,
+          "support": 0.5521472392638037,
+          "left_to_right_probability": 0.8653846153846154,
+          "right_to_left_probability": 0.6206896551724138,
+          "jaccard": 0.5660377358490566,
+          "lift": 0.9728116710875333,
+          "pmi": -0.03976755759527415
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_061",
+      "color_family_ids": [
+        "color_02",
+        "color_07"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_07",
+          "case_count": 45,
+          "support": 0.27607361963190186,
+          "left_to_right_probability": 0.34615384615384615,
+          "right_to_left_probability": 0.6818181818181818,
+          "jaccard": 0.2980132450331126,
+          "lift": 0.8548951048951049,
+          "pmi": -0.2261806818261557
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_07",
+          "case_count": 70,
+          "support": 0.4294478527607362,
+          "left_to_right_probability": 0.4697986577181208,
+          "right_to_left_probability": 0.8433734939759037,
+          "jaccard": 0.43209876543209874,
+          "lift": 0.922616641060888,
+          "pmi": -0.11619678063304203
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_02",
+          "right_family_id": "color_07",
+          "case_count": 96,
+          "support": 0.588957055214724,
+          "left_to_right_probability": 0.6193548387096774,
+          "right_to_left_probability": 0.9230769230769231,
+          "jaccard": 0.588957055214724,
+          "lift": 0.9707196029776677,
+          "pmi": -0.0428734684630957
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_062",
+      "color_family_ids": [
+        "color_08",
+        "color_11"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_11",
+          "case_count": 21,
+          "support": 0.12883435582822086,
+          "left_to_right_probability": 0.4772727272727273,
+          "right_to_left_probability": 0.22340425531914893,
+          "jaccard": 0.1794871794871795,
+          "lift": 0.8276112185686654,
+          "pmi": -0.2729748933050968
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_11",
+          "case_count": 70,
+          "support": 0.4294478527607362,
+          "left_to_right_probability": 0.8045977011494253,
+          "right_to_left_probability": 0.49295774647887325,
+          "jaccard": 0.44025157232704404,
+          "lift": 0.923587502023636,
+          "pmi": -0.11467944417736639
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_08",
+          "right_family_id": "color_11",
+          "case_count": 95,
+          "support": 0.5828220858895705,
+          "left_to_right_probability": 0.9134615384615384,
+          "right_to_left_probability": 0.6168831168831169,
+          "jaccard": 0.5828220858895705,
+          "lift": 0.9668456543456543,
+          "pmi": -0.04864249627396822
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_063",
+      "color_family_ids": [
+        "color_01",
+        "color_08"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_08",
+          "case_count": 15,
+          "support": 0.09202453987730061,
+          "left_to_right_probability": 0.22058823529411764,
+          "right_to_left_probability": 0.3409090909090909,
+          "jaccard": 0.15463917525773196,
+          "lift": 0.8171791443850268,
+          "pmi": -0.2912757100480404
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_08",
+          "case_count": 44,
+          "support": 0.26993865030674846,
+          "left_to_right_probability": 0.4943820224719101,
+          "right_to_left_probability": 0.5057471264367817,
+          "jaccard": 0.3333333333333333,
+          "lift": 0.9262559731370271,
+          "pmi": -0.11051715394675105
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_01",
+          "right_family_id": "color_08",
+          "case_count": 66,
+          "support": 0.4049079754601227,
+          "left_to_right_probability": 0.6111111111111112,
+          "right_to_left_probability": 0.6346153846153846,
+          "jaccard": 0.4520547945205479,
+          "lift": 0.9577991452991453,
+          "pmi": -0.06220494671502966
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_064",
+      "color_family_ids": [
+        "color_05",
+        "color_10"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_10",
+          "case_count": 64,
+          "support": 0.39263803680981596,
+          "left_to_right_probability": 0.5981308411214953,
+          "right_to_left_probability": 0.6037735849056604,
+          "jaccard": 0.42953020134228187,
+          "lift": 0.9197672368189032,
+          "pmi": -0.12065928673326863
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_10",
+          "case_count": 89,
+          "support": 0.5460122699386503,
+          "left_to_right_probability": 0.7739130434782608,
+          "right_to_left_probability": 0.6691729323308271,
+          "jaccard": 0.559748427672956,
+          "lift": 0.9484798953906506,
+          "pmi": -0.07631090124808944
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_10",
+          "case_count": 94,
+          "support": 0.5766871165644172,
+          "left_to_right_probability": 0.8392857142857143,
+          "right_to_left_probability": 0.6482758620689655,
+          "jaccard": 0.5766871165644172,
+          "lift": 0.9434729064039409,
+          "pmi": -0.08394700616382365
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_065",
+      "color_family_ids": [
+        "color_05",
+        "color_07"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_07",
+          "case_count": 40,
+          "support": 0.24539877300613497,
+          "left_to_right_probability": 0.37383177570093457,
+          "right_to_left_probability": 0.6060606060606061,
+          "jaccard": 0.3007518796992481,
+          "lift": 0.9232512036250354,
+          "pmi": -0.11520485664116044
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_07",
+          "case_count": 49,
+          "support": 0.3006134969325153,
+          "left_to_right_probability": 0.4260869565217391,
+          "right_to_left_probability": 0.5903614457831325,
+          "jaccard": 0.3288590604026846,
+          "lift": 0.8367731796752227,
+          "pmi": -0.25709148394501413
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_05",
+          "right_family_id": "color_07",
+          "case_count": 64,
+          "support": 0.39263803680981596,
+          "left_to_right_probability": 0.5714285714285714,
+          "right_to_left_probability": 0.6153846153846154,
+          "jaccard": 0.42105263157894735,
+          "lift": 0.8956043956043956,
+          "pmi": -0.15906648596761866
+        }
+      }
+    },
+    {
+      "pattern_id": "pattern_066",
+      "color_family_ids": [
+        "color_06",
+        "color_07"
+      ],
+      "detected_at": {
+        "8": false,
+        "16": false,
+        "32": false
+      },
+      "scale_role": "unstable",
+      "measurements": {
+        "8": {
+          "palette_size": 8,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_07",
+          "case_count": 23,
+          "support": 0.1411042944785276,
+          "left_to_right_probability": 0.23958333333333334,
+          "right_to_left_probability": 0.3484848484848485,
+          "jaccard": 0.16546762589928057,
+          "lift": 0.5916982323232323,
+          "pmi": -0.7570665097915193
+        },
+        "16": {
+          "palette_size": 16,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_07",
+          "case_count": 53,
+          "support": 0.32515337423312884,
+          "left_to_right_probability": 0.4076923076923077,
+          "right_to_left_probability": 0.6385542168674698,
+          "jaccard": 0.33125,
+          "lift": 0.80064874884152,
+          "pmi": -0.32075863558110235
+        },
+        "32": {
+          "palette_size": 32,
+          "presence_threshold": 0.005,
+          "left_family_id": "color_06",
+          "right_family_id": "color_07",
+          "case_count": 81,
+          "support": 0.49693251533742333,
+          "left_to_right_probability": 0.5785714285714286,
+          "right_to_left_probability": 0.7788461538461539,
+          "jaccard": 0.49693251533742333,
+          "lift": 0.9067994505494507,
+          "pmi": -0.14114457797035618
+        }
+      }
+    }
+  ]
+}

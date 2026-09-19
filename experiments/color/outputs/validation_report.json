@@ -1,0 +1,62 @@
+{
+  "experiment_id": "mucha_color_patterns_v1",
+  "validated_at": "2026-09-19T07:44:49.912282+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "check": "input_count",
+      "passed": true,
+      "detail": "observed=163, expected=163"
+    },
+    {
+      "check": "run_count",
+      "passed": true,
+      "detail": "observed=489, expected=489"
+    },
+    {
+      "check": "no_failures",
+      "passed": true,
+      "detail": "failures=0"
+    },
+    {
+      "check": "frequency_sums",
+      "passed": true,
+      "detail": "errors=0"
+    },
+    {
+      "check": "all_scales_present",
+      "passed": true,
+      "detail": "observed=489, expected=489"
+    },
+    {
+      "check": "traceable_ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "input_hashes",
+      "passed": true,
+      "detail": "mismatches=0"
+    },
+    {
+      "check": "a59_deterministic_rerun",
+      "passed": true,
+      "detail": "OKLab/8 swatches and frequencies within 1e-12"
+    },
+    {
+      "check": "a59_blue_reproduced",
+      "passed": true,
+      "detail": "expected in 16- or 32-color result"
+    },
+    {
+      "check": "a59_red_reproduced",
+      "passed": true,
+      "detail": "expected in 32-color result"
+    },
+    {
+      "check": "required_outputs",
+      "passed": true,
+      "detail": "missing=[]"
+    }
+  ]
+}

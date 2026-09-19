@@ -1,0 +1,47 @@
+{
+  "experiment_id": "mucha_color_patterns_v1",
+  "title": "Mining Color Patterns in the Mucha Corpus",
+  "status": "completed",
+  "research_area": "color",
+  "unit_of_analysis": "catalogue_object",
+  "input_selection": {
+    "rule": "catalogue_reference.source_variant == color_plate",
+    "expected_asset_count": 163
+  },
+  "tool": {
+    "name": "Pylette",
+    "version": "6.0.0",
+    "repository": "https://github.com/qTipTip/Pylette",
+    "commit": "04701a7706c8375513448e92c7496321984b2039"
+  },
+  "extraction_conditions": [
+    {
+      "mode": "OKLab",
+      "palette_size": 8,
+      "resize": 256
+    },
+    {
+      "mode": "OKLab",
+      "palette_size": 16,
+      "resize": 256
+    },
+    {
+      "mode": "OKLab",
+      "palette_size": 32,
+      "resize": 256
+    }
+  ],
+  "notebook": "color_patterns.ipynb",
+  "runner": "run_experiment.py",
+  "completed_at": "2026-09-19T07:44:45.933369+00:00",
+  "output_summary": {
+    "input_assets": 163,
+    "expected_runs": 489,
+    "completed_runs": 489,
+    "failed_runs": 0,
+    "normalized_palette_rows": 9128,
+    "selected_color_family_count": 12,
+    "candidate_patterns": 66,
+    "series_with_multiple_images": 9
+  }
+}
