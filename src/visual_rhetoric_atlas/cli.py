@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from .data.wikimedia import DEFAULT_CATEGORY, DEFAULT_CONTACT, CommonsClient, discover, download_records, read_manifest, verify_records, write_reports
-from .information import build_information
+from .information import build_classification, build_information
 from .knowledge.pipeline import build_knowledge
 
 
@@ -36,6 +36,8 @@ def build_parser():
     build = information_commands.add_parser("build")
     build.add_argument("--manifest", type=Path, default=DEFAULT_DATA / "manifest.jsonl")
     build.add_argument("--output-dir", type=Path, default=DEFAULT_INFORMATION)
+    classify = information_commands.add_parser("classify")
+    classify.add_argument("--information-dir", type=Path, default=DEFAULT_INFORMATION)
 
     knowledge = stages.add_parser("knowledge", help="Mine evidence-linked corpus interpretations.")
     knowledge_commands = knowledge.add_subparsers(dest="command", required=True)
@@ -51,7 +53,8 @@ def main(argv=None):
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         return
     if args.stage == "information":
-        summary = build_information(args.manifest, args.output_dir)
+        summary = (build_information(args.manifest, args.output_dir)
+                   if args.command == "build" else build_classification(args.information_dir))
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         return
     output = args.output_dir.resolve()

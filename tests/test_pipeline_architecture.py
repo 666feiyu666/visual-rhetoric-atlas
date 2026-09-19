@@ -4,6 +4,12 @@ import pytest
 
 from visual_rhetoric_atlas.information.bridges import object_id, parse_bridges_title
 from visual_rhetoric_atlas.information.codebook import feature_record, load_codebook, validate_feature_record
+from visual_rhetoric_atlas.information.classification import (
+    apply_overrides,
+    classify_records,
+    load_classification_codebook,
+    route_codebooks,
+)
 from visual_rhetoric_atlas.information.consolidate import build_information, consolidate_records
 from visual_rhetoric_atlas.knowledge.claims import candidate_claim
 from visual_rhetoric_atlas.knowledge.text_mining import (
@@ -128,3 +134,45 @@ def test_information_build_rejects_missing_or_empty_manifest(tmp_path):
     empty.write_text("", encoding="utf-8")
     with pytest.raises(ValueError, match="empty manifest"):
         build_information(empty, tmp_path / "information")
+
+
+def test_classification_separates_source_evidence_from_visual_review():
+    raw = [
+        source(1, "File:Mucha - Bridges, A01.jpg", 140, 403),
+        source(2, "File:Mucha - Bridges, A01 -c.jpg", 593, 1715),
+    ]
+    assets, objects, _ = consolidate_records(raw)
+    asset_records, object_records, review = classify_records(
+        assets, objects, created_at="2026-09-19T00:00:00+00:00"
+    )
+    by_asset = {item["asset_id"]: item for item in asset_records}
+    assert by_asset["commons_2"]["color_status"] == "catalogue_designated_color"
+    assert by_asset["commons_2"]["asset_content_type"] == "uncertain"
+    assert by_asset["commons_2"]["analysis_eligibility"] == "review"
+    assert object_records[0]["work_type"] == "uncertain"
+    assert object_records[0]["candidate_codebooks"] == ["color_features"]
+    assert review[0]["priority"] == "high"
+
+
+def test_reviewed_classification_routes_shared_and_type_specific_codebooks():
+    assert load_classification_codebook()["version"] == 1
+    assert route_codebooks("poster", color_eligible=True) == [
+        "visual_core", "poster_features", "color_features"
+    ]
+    assert route_codebooks("book_or_periodical_illustration") == [
+        "visual_core", "illustration_features"
+    ]
+    assert route_codebooks("uncertain", color_eligible=False) == []
+
+
+def test_human_override_preserves_review_evidence():
+    records = [{"asset_id": "a1", "classification_status": "machine_proposed",
+                "method": "source_metadata_triage"}]
+    apply_overrides(records, [{
+        "asset_id": "a1", "changes": {"asset_content_type": "single_work_reproduction"},
+        "annotator": "reviewer_1", "evidence": ["Complete border is visible."],
+        "reviewed_at": "2026-09-19T00:00:00+00:00",
+    }], id_field="asset_id")
+    assert records[0]["classification_status"] == "human_reviewed"
+    assert records[0]["method"] == "human_visual_review"
+    assert records[0]["review"]["evidence"] == ["Complete border is visible."]

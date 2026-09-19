@@ -1,0 +1,59 @@
+{
+  "codebook_id": "corpus_classification",
+  "version": 1,
+  "scope": "Routing digital assets and catalogue objects to appropriate visual codebooks before content annotation.",
+  "units": {
+    "asset": "A downloaded digital file or reproduction.",
+    "object": "A catalogue object that may have one or more digital asset variants."
+  },
+  "asset_fields": {
+    "asset_content_type": [
+      "single_work_reproduction",
+      "detail_or_crop",
+      "catalogue_page",
+      "multi_work_composite",
+      "document_or_text_page",
+      "uncertain"
+    ],
+    "completeness": ["complete", "partial", "uncertain"],
+    "color_status": [
+      "catalogue_designated_color",
+      "not_catalogue_designated_color",
+      "uncertain"
+    ],
+    "analysis_eligibility": ["eligible", "segment_first", "exclude", "review"]
+  },
+  "object_fields": {
+    "work_type": [
+      "poster",
+      "decorative_panel",
+      "book_or_periodical_illustration",
+      "calendar_or_series_panel",
+      "advertising_ephemera",
+      "study_or_drawing",
+      "photograph_or_document",
+      "other",
+      "uncertain"
+    ],
+    "poster_subtype": [
+      "theatrical_poster",
+      "commercial_poster",
+      "exhibition_poster",
+      "event_poster",
+      "institutional_poster",
+      "uncertain_poster"
+    ]
+  },
+  "routing": {
+    "shared": "visual_core",
+    "by_work_type": {
+      "poster": "poster_features",
+      "decorative_panel": "decorative_panel_features",
+      "book_or_periodical_illustration": "illustration_features",
+      "calendar_or_series_panel": "decorative_panel_features",
+      "advertising_ephemera": "poster_features",
+      "study_or_drawing": "drawing_features"
+    },
+    "color": "color_features"
+  }
+}
