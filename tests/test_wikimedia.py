@@ -5,7 +5,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from visual_rhetoric_atlas.wikimedia import (
+from visual_rhetoric_atlas.data.wikimedia import (
     category_files,
     discover,
     download_records,

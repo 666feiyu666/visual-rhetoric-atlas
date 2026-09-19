@@ -25,9 +25,9 @@ def validate_result(value, schema, stage):
     return value
 
 
-def prepare(repo, artwork_id, *, model, stage="blind", parent_reading_id=None, mode="live"):
-    if stage not in {"blind", "contextual"} or mode not in {"live", "demo"}:
-        raise ValueError("Invalid reading stage or mode")
+def prepare(repo, artwork_id, *, model, stage="blind", parent_reading_id=None):
+    if stage not in {"blind", "contextual"}:
+        raise ValueError("Invalid reading stage")
     if not model.strip():
         raise ValueError("Enter a model ID.")
     artwork = repo.artwork(artwork_id)
@@ -43,8 +43,8 @@ def prepare(repo, artwork_id, *, model, stage="blind", parent_reading_id=None, m
             raise ValueError("Choose a completed blind reading.")
         parent = repo.reading(parent_reading_id)
         if (parent["artwork_id"] != artwork_id or parent["stage"] != "blind"
-                or parent["status"] != "completed" or parent["mode"] != mode):
-            raise ValueError("Parent must be a completed blind reading of this artwork in the same mode.")
+                or parent["status"] != "completed"):
+            raise ValueError("Parent must be a completed blind reading of this artwork.")
         if not artwork["context"].strip() and not artwork["source"].strip():
             raise ValueError("Import the artwork with source or background text for this stage.")
         blind = repo.result(parent_reading_id)
@@ -55,13 +55,9 @@ def prepare(repo, artwork_id, *, model, stage="blind", parent_reading_id=None, m
         }, ensure_ascii=False, indent=2)
     elif parent_reading_id:
         raise ValueError("A blind reading has no parent.")
-    if mode == "demo":
-        from .demo import image_bytes
-        if artwork["kind"] != "synthetic_demo" or artwork["original_sha256"] != digest(image_bytes()):
-            raise ValueError("Offline fixture mode only supports the built-in synthetic artwork.")
     return {
         "format_version": 1, "app_version": __version__, "artwork_id": artwork_id,
-        "stage": stage, "mode": mode, "model": model.strip(),
+        "stage": stage, "model": model.strip(),
         "instructions": instructions, "input_text": payload, "response_schema": schema,
         "image_sha256": digest(raw), "image_file": "input.png",
         "parent_reading_id": parent_reading_id, "parent_result_sha256": parent_hash,
@@ -74,7 +70,7 @@ def execute(repo, request, *, approved_token, provider):
     if approved_token != token(request):
         raise ValueError("Request changed. Preview it again.")
     current = prepare(repo, request["artwork_id"], model=request["model"], stage=request["stage"],
-                      parent_reading_id=request["parent_reading_id"], mode=request["mode"])
+                      parent_reading_id=request["parent_reading_id"])
     if token(current) != approved_token:
         raise ValueError("Image, prompts or context changed. Preview again.")
     raw = repo.image(request["artwork_id"]).read_bytes()
@@ -86,10 +82,10 @@ def execute(repo, request, *, approved_token, provider):
     (folder / "input.png").write_bytes(raw)
     write_json(folder / "request.json", request)
     record = {"id": reading_id, "format_version": 1, "artwork_id": request["artwork_id"],
-              "stage": request["stage"], "mode": request["mode"], "model": request["model"],
+              "stage": request["stage"], "model": request["model"],
               "parent_reading_id": request["parent_reading_id"], "created_at": now(),
               "request_sha256": approved_token, "status": "requested",
-              "epistemic_status": "synthetic_fixture" if request["mode"] == "demo" else "unreviewed_model_hypotheses"}
+              "epistemic_status": "unreviewed_model_hypotheses"}
     write_json(folder / "manifest.json", record)
     try:
         response = provider(request, raw)

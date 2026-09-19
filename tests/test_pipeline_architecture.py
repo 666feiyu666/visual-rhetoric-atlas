@@ -10,7 +10,6 @@ from visual_rhetoric_atlas.knowledge.text_mining import (
     concept_frequencies,
     interpretation_units,
 )
-from visual_rhetoric_atlas.rag.evidence import evidence_package
 
 
 def source(pageid, title, width, height):
@@ -77,7 +76,7 @@ def test_interpretations_become_mineable_text_units():
     assert concept_cooccurrences(units)[("circular-frame", "female-figure")] == 2
 
 
-def test_claims_and_rag_require_traceable_evidence():
+def test_candidate_claims_require_traceable_corpus_evidence():
     with pytest.raises(ValueError):
         candidate_claim(claim_id="c0", text="Unsupported", information_ids=[],
                         interpretation_unit_ids=[], scope="none", method="none")
@@ -85,8 +84,6 @@ def test_claims_and_rag_require_traceable_evidence():
         claim_id="c1", text="A candidate pattern", information_ids=["i1"],
         interpretation_unit_ids=["u1"], scope="Mucha corpus", method="cooccurrence",
     )
-    package = evidence_package(query="Why?", information_records=[{"id": "i1"}],
-                               knowledge_records=[claim])
-    assert package["generation_status"] == "not_generated"
-    assert package["knowledge_records"][0]["claim_id"] == "c1"
-
+    assert claim["information_ids"] == ["i1"]
+    assert claim["interpretation_unit_ids"] == ["u1"]
+    assert claim["epistemic_status"] == "candidate_knowledge"

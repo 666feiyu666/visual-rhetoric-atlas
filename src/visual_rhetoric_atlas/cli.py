@@ -1,4 +1,4 @@
-"""Command line interface following the Data-Information-Knowledge-RAG chain."""
+"""Command line interface for the Data-Information-Knowledge corpus pipeline."""
 
 import argparse
 import json
@@ -63,4 +63,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
-

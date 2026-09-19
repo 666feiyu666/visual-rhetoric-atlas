@@ -1,4 +1,4 @@
-"""Minimal provenance shared by Data, Information, Knowledge, and RAG."""
+"""Minimal provenance shared by Data, Information, and Knowledge."""
 
 from datetime import datetime, timezone
 
@@ -16,4 +16,3 @@ def derived_record(*, stage, method, inputs, status="completed", format_version=
         "status": status,
         "created_at": utc_now(),
     }
-

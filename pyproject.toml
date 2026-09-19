@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "visual-rhetoric-atlas"
 version = "0.1.0"
-description = "Traceable visual readings informed by Peircean semiotics"
+description = "A traceable visual-rhetoric corpus and data-mining pipeline"
 requires-python = ">=3.11"
-dependencies = ["streamlit>=1.45,<2", "openai>=2,<3", "Pillow>=11,<13", "jsonschema>=4,<5", "python-dotenv>=1,<2"]
+dependencies = ["openai>=2,<3", "Pillow>=11,<13", "jsonschema>=4,<5"]
 
 [project.scripts]
 visual-rhetoric-atlas = "visual_rhetoric_atlas.cli:main"

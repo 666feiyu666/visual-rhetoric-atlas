@@ -1,31 +1,88 @@
 import json
 from copy import deepcopy
+import io
 from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
+from PIL import Image, ImageDraw
 
-from visual_rhetoric_atlas.demo import DemoProvider, image_bytes, result
-from visual_rhetoric_atlas.records import Repository, read_json, write_json
-from visual_rhetoric_atlas.workflow import OpenAIProvider, execute, prepare, token, validate_result
+from visual_rhetoric_atlas.knowledge.records import Repository, read_json, write_json
+from visual_rhetoric_atlas.knowledge.reading import OpenAIProvider, execute, prepare, token, validate_result
+
+
+def image_bytes():
+    image = Image.new("RGB", (600, 800), "#faf8f3")
+    draw = ImageDraw.Draw(image)
+    draw.text((60, 180), "A GAP IN THE SEQUENCE", fill="#252a2b", font_size=27)
+    for index in range(6):
+        if index != 3:
+            draw.rectangle((60 + index * 80, 350, 112 + index * 80, 445), fill="#252a2b")
+    buffer = io.BytesIO()
+    image.save(buffer, format="PNG")
+    return buffer.getvalue()
+
+
+def result(stage):
+    value = {
+        "summary": "Test fixture: a synthetic arrangement of text and interrupted repetition.",
+        "observations": [
+            {"id": "o1", "description": "A short line of dark text above the shapes.",
+             "location": "Upper-left area", "bbox": [0.08, 0.20, 0.95, 0.28],
+             "visible_text": "A GAP IN THE SEQUENCE", "uncertainty": ""},
+            {"id": "o2", "description": "Five rectangles occupy six equally spaced positions.",
+             "location": "Middle horizontal band", "bbox": [0.10, 0.43, 0.86, 0.56],
+             "visible_text": "", "uncertainty": "The grouping is only a visual description."},
+        ],
+        "sign_relations": [{
+            "observation_ids": ["o1", "o2"], "sign_vehicle": "Repetition with one omitted position",
+            "proposed_object": "An interruption in a sequence",
+            "proposed_interpretant": "A viewer might notice an absence or a pause.",
+            "relation_types": ["iconic", "symbolic"],
+            "grounds": "A schematic sequence establishes expectation.",
+            "alternative_readings": ["A missing or unfinished item"],
+            "limits": "No audience reception or author intent has been established.",
+        }],
+        "candidate_insights": [{
+            "observation_ids": ["o2"],
+            "claim": "An omission can become perceptible against a regular sequence.",
+            "applicability": "Layouts with a clear repeated unit.",
+            "limits": "This does not establish what the omission means.",
+        }],
+        "contextual_updates": [], "uncertainties": ["Test fixture."],
+        "tags": ["repetition", "negative-space"],
+    }
+    if stage == "contextual":
+        value["contextual_updates"] = [{
+            "earlier_claim": "The gap may be read as an interruption.",
+            "assessment": "supported", "context_evidence": "Synthetic test context.",
+            "explanation": "The context identifies the fixture but not audience response.",
+        }]
+    return value
+
+
+class FixtureProvider:
+    def __call__(self, request, image):
+        return {"status": "completed", "output_text": json.dumps(result(request["stage"])),
+                "response_id": None, "usage": None, "fixture": True}
 
 
 @pytest.fixture
 def case(tmp_path):
     repo = Repository(tmp_path / "data")
     artwork = repo.import_artwork(image_bytes(), title="SECRET TITLE", source="SECRET SOURCE",
-                                  context="SECRET CONTEXT", kind="synthetic_demo")
+                                  context="SECRET CONTEXT", kind="existing_work")
     return repo, artwork
 
 
 def request_for(case, **kwargs):
     repo, artwork = case
-    return prepare(repo, artwork["id"], model="offline-fixture", mode="demo", **kwargs)
+    return prepare(repo, artwork["id"], model="test-fixture", **kwargs)
 
 
 def run(case, request=None, provider=None):
     request = request or request_for(case)
-    return execute(case[0], request, approved_token=token(request), provider=provider or DemoProvider())
+    return execute(case[0], request, approved_token=token(request), provider=provider or FixtureProvider())
 
 
 def test_blind_input_excludes_metadata(case):
@@ -70,10 +127,10 @@ def test_changed_image_rejected(case):
 def test_parent_from_other_artwork_rejected(case):
     repo, artwork = case
     parent = run(case)
-    other = repo.import_artwork(image_bytes(), title="Other", context="Context", kind="synthetic_demo")
+    other = repo.import_artwork(image_bytes(), title="Other", context="Context", kind="existing_work")
     with pytest.raises(ValueError, match="Parent"):
-        prepare(repo, other["id"], model="offline-fixture", stage="contextual",
-                parent_reading_id=parent["id"], mode="demo")
+        prepare(repo, other["id"], model="test-fixture", stage="contextual",
+                parent_reading_id=parent["id"])
 
 
 @pytest.mark.parametrize("response", [
@@ -123,13 +180,6 @@ def test_path_escape_rejected(case):
         case[0].path("corpus", "../../secret")
 
 
-def test_arbitrary_upload_cannot_use_fixture(case):
-    repo, _ = case
-    other = repo.import_artwork(image_bytes(), title="Real artwork", kind="existing_work")
-    with pytest.raises(ValueError, match="fixture"):
-        prepare(repo, other["id"], model="offline-fixture", mode="demo")
-
-
 def test_repeated_readings_and_reviews_do_not_overwrite(case):
     repo, _ = case
     first, second = run(case), run(case)
@@ -159,7 +209,7 @@ def test_api_adapter_sends_exact_preview_without_metadata(case, monkeypatch):
             return SimpleNamespace(status="completed", output_text=json.dumps(result("blind")),
                                    id="mock-response", usage=None)
     monkeypatch.setattr(openai, "OpenAI", Client)
-    request = prepare(case[0], case[1]["id"], model="test-model", mode="live")
+    request = prepare(case[0], case[1]["id"], model="test-model")
     reading = execute(case[0], request, approved_token=token(request), provider=OpenAIProvider())
     assert reading["status"] == "completed"
     assert seen["settings"]["max_retries"] == 0

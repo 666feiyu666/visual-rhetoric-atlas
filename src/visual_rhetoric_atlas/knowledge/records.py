@@ -44,7 +44,7 @@ class Repository:
             raise ValueError("Give the artwork a title.")
         if not raw or len(raw) > 20 * 1024 * 1024:
             raise ValueError("Choose an image of at most 20 MB.")
-        if kind not in {"unknown", "existing_work", "generated", "synthetic_demo"}:
+        if kind not in {"unknown", "existing_work", "generated"}:
             raise ValueError("Invalid artwork kind")
         with Image.open(io.BytesIO(raw)) as original:
             if original.format not in {"PNG", "JPEG", "WEBP"}:
@@ -126,7 +126,7 @@ class Repository:
         source_folder = self.path("readings", reading_id)
         shutil.copy2(source_folder / "input.png", folder / "image.png")
         package = {"format_version": 1, "id": package_id, "created_at": now(),
-                   "epistemic_status": "synthetic_fixture" if record["mode"] == "demo" else "model_hypotheses_with_separate_human_reviews",
+                   "epistemic_status": "model_hypotheses_with_separate_human_reviews",
                    "image": "image.png", "artwork": artwork, "reading": record,
                    "result": self.result(reading_id), "human_reviews": self.reviews(reading_id),
                    "request": read_json(source_folder / "request.json")}
