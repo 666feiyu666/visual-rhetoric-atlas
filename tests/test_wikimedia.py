@@ -3,6 +3,7 @@ import io
 import json
 from pathlib import Path
 
+import pytest
 from PIL import Image
 
 from visual_rhetoric_atlas.data.wikimedia import (
@@ -12,6 +13,7 @@ from visual_rhetoric_atlas.data.wikimedia import (
     read_manifest,
     replace_with_retry,
     safe_filename,
+    verify_records,
 )
 
 
@@ -98,6 +100,28 @@ def test_download_is_verified_and_resumable(tmp_path):
     assert all(item["download_status"] == "downloaded" for item in second)
     assert len([call for call in client.calls if call.get("list")]) == before
     assert not list(output.rglob("*.part"))
+
+
+def test_verify_detects_missing_local_files(tmp_path):
+    raw = jpeg_bytes("blue")
+    output = tmp_path / "wikimedia"
+    client = FakeClient(raw)
+    discover(client, output)
+    records = download_records(client, output)
+    (output / records[0]["local_path"]).unlink()
+    report = verify_records(output, records)
+    assert report["counts"] == {"missing": 1, "valid": 1}
+    assert report["complete"] is False
+
+
+def test_discover_requires_refresh_and_protects_full_manifest(tmp_path):
+    output = tmp_path / "wikimedia"
+    client = FakeClient(jpeg_bytes())
+    discover(client, output)
+    with pytest.raises(ValueError, match="refresh"):
+        discover(client, output)
+    with pytest.raises(ValueError, match="limited discovery"):
+        discover(client, output, limit=1, refresh=True)
 
 
 def test_corrupt_download_is_not_promoted(tmp_path):

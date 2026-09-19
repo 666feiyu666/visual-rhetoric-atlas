@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "format_version": {"const": 1},
+    "codebook_id": {"const": "visual_features"},
+    "codebook_version": {"const": 1},
+    "information_record_id": {"type": "string", "minLength": 1},
+    "object_id": {"type": "string", "minLength": 1},
+    "annotator": {
+      "type": "object",
+      "properties": {
+        "type": {"enum": ["human", "model", "hybrid"]},
+        "id": {"type": "string", "minLength": 1},
+        "method": {"type": "string", "minLength": 1}
+      },
+      "required": ["type", "id", "method"],
+      "additionalProperties": false
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "figure_presence": {"enum": ["absent", "present", "uncertain"]},
+        "figure_count": {"type": ["integer", "null"], "minimum": 0},
+        "dominant_figure_position": {"enum": ["none", "center", "left", "right", "distributed", "uncertain"]},
+        "gaze_direction": {"enum": ["none", "viewer", "left", "right", "up", "down", "multiple", "uncertain"]},
+        "framing": {"enum": ["none", "rectangular", "circular", "arched", "panel", "other", "uncertain"]},
+        "ornament_presence": {"enum": ["absent", "present", "uncertain"]},
+        "ornament_motifs": {
+          "type": "array",
+          "items": {"enum": ["floral", "vegetal", "geometric", "celestial", "textile", "architectural", "other", "uncertain"]},
+          "uniqueItems": true
+        },
+        "text_presence": {"enum": ["absent", "present", "uncertain"]},
+        "text_regions": {
+          "type": "array",
+          "items": {"enum": ["top", "bottom", "left", "right", "center", "integrated", "multiple", "uncertain"]},
+          "uniqueItems": true
+        },
+        "composition_axis": {"enum": ["vertical", "horizontal", "radial", "diagonal", "mixed", "uncertain"]},
+        "symmetry": {"enum": ["none", "approx_bilateral", "radial", "repetition", "uncertain"]},
+        "product_presence": {"enum": ["absent", "present", "uncertain"]},
+        "image_text_relation": {"enum": ["none", "separate_zones", "overlap", "integrated", "frame_caption", "uncertain"]}
+      },
+      "required": [
+        "figure_presence", "figure_count", "dominant_figure_position", "gaze_direction",
+        "framing", "ornament_presence", "ornament_motifs", "text_presence", "text_regions",
+        "composition_axis", "symmetry", "product_presence", "image_text_relation"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "feature_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+          "description": {"type": "string", "minLength": 1},
+          "bbox": {
+            "type": ["array", "null"],
+            "items": {"type": "number", "minimum": 0, "maximum": 1},
+            "minItems": 4,
+            "maxItems": 4
+          }
+        },
+        "required": ["feature_ids", "description", "bbox"],
+        "additionalProperties": false
+      }
+    },
+    "review_status": {"enum": ["unreviewed", "accepted", "needs_revision", "rejected"]},
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "required": [
+    "format_version", "codebook_id", "codebook_version", "information_record_id",
+    "object_id", "annotator", "features", "evidence", "review_status", "created_at"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,22 @@
+{
+  "codebook_id": "visual_features",
+  "version": 1,
+  "scope": "Visible, comparable poster features; interpretations and color measurements are excluded.",
+  "unit_of_analysis": "catalogue object",
+  "missing_value_policy": "Use uncertain when the image is insufficient; do not infer historical facts.",
+  "features": {
+    "figure_presence": ["absent", "present", "uncertain"],
+    "figure_count": "non-negative integer or null",
+    "dominant_figure_position": ["none", "center", "left", "right", "distributed", "uncertain"],
+    "gaze_direction": ["none", "viewer", "left", "right", "up", "down", "multiple", "uncertain"],
+    "framing": ["none", "rectangular", "circular", "arched", "panel", "other", "uncertain"],
+    "ornament_presence": ["absent", "present", "uncertain"],
+    "ornament_motifs": ["floral", "vegetal", "geometric", "celestial", "textile", "architectural", "other", "uncertain"],
+    "text_presence": ["absent", "present", "uncertain"],
+    "text_regions": ["top", "bottom", "left", "right", "center", "integrated", "multiple", "uncertain"],
+    "composition_axis": ["vertical", "horizontal", "radial", "diagonal", "mixed", "uncertain"],
+    "symmetry": ["none", "approx_bilateral", "radial", "repetition", "uncertain"],
+    "product_presence": ["absent", "present", "uncertain"],
+    "image_text_relation": ["none", "separate_zones", "overlap", "integrated", "frame_caption", "uncertain"]
+  }
+}

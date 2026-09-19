@@ -25,15 +25,17 @@ def validate_result(value, schema, stage):
     return value
 
 
-def prepare(repo, artwork_id, *, model, stage="blind", parent_reading_id=None):
+def prepare(repo, object_id, *, model, stage="blind", parent_reading_id=None):
     if stage not in {"blind", "contextual"}:
         raise ValueError("Invalid reading stage")
     if not model.strip():
         raise ValueError("Enter a model ID.")
-    artwork = repo.artwork(artwork_id)
-    raw = repo.image(artwork_id).read_bytes()
-    if digest(raw) != artwork["input_sha256"]:
-        raise ValueError("Stored image changed; import it as a new artwork.")
+    object_record = repo.object(object_id)
+    asset = repo.canonical_asset(object_id)
+    image_path = repo.image(object_id)
+    raw = image_path.read_bytes()
+    if asset.get("sha256") and digest(raw) != asset["sha256"]:
+        raise ValueError("Canonical corpus image changed and no longer matches its Information record.")
     instructions = (RESOURCES / "prompts" / f"{stage}.md").read_text(encoding="utf-8")
     schema = json.loads((RESOURCES / "schemas" / "reading.schema.json").read_text(encoding="utf-8"))
     payload = "Read the attached image. No external context is provided."
@@ -42,24 +44,24 @@ def prepare(repo, artwork_id, *, model, stage="blind", parent_reading_id=None):
         if not parent_reading_id:
             raise ValueError("Choose a completed blind reading.")
         parent = repo.reading(parent_reading_id)
-        if (parent["artwork_id"] != artwork_id or parent["stage"] != "blind"
+        if (parent["object_id"] != object_id or parent["stage"] != "blind"
                 or parent["status"] != "completed"):
-            raise ValueError("Parent must be a completed blind reading of this artwork.")
-        if not artwork["context"].strip() and not artwork["source"].strip():
-            raise ValueError("Import the artwork with source or background text for this stage.")
+            raise ValueError("Parent must be a completed blind reading of this corpus object.")
         blind = repo.result(parent_reading_id)
         parent_hash = token(blind)
         payload = json.dumps({
             "blind_reading": blind,
-            "unverified_source_material": {"source": artwork["source"], "context": artwork["context"]},
+            "unverified_source_material": repo.source_context(object_id),
         }, ensure_ascii=False, indent=2)
     elif parent_reading_id:
         raise ValueError("A blind reading has no parent.")
     return {
-        "format_version": 1, "app_version": __version__, "artwork_id": artwork_id,
+        "format_version": 1, "app_version": __version__, "object_id": object_id,
+        "canonical_asset_id": object_record["canonical_asset_id"],
         "stage": stage, "model": model.strip(),
         "instructions": instructions, "input_text": payload, "response_schema": schema,
-        "image_sha256": digest(raw), "image_file": "input.png",
+        "image_sha256": digest(raw), "image_mime": asset.get("mime") or "application/octet-stream",
+        "image_file": "input" + image_path.suffix.lower(),
         "parent_reading_id": parent_reading_id, "parent_result_sha256": parent_hash,
         "store": False, "image_detail": "high", "max_output_tokens": 6000,
     }
@@ -69,19 +71,20 @@ def execute(repo, request, *, approved_token, provider):
     request = deepcopy(request)
     if approved_token != token(request):
         raise ValueError("Request changed. Preview it again.")
-    current = prepare(repo, request["artwork_id"], model=request["model"], stage=request["stage"],
+    current = prepare(repo, request["object_id"], model=request["model"], stage=request["stage"],
                       parent_reading_id=request["parent_reading_id"])
     if token(current) != approved_token:
         raise ValueError("Image, prompts or context changed. Preview again.")
-    raw = repo.image(request["artwork_id"]).read_bytes()
+    raw = repo.image(request["object_id"]).read_bytes()
     if digest(raw) != request["image_sha256"]:
         raise ValueError("Image changed after preview.")
     reading_id = identifier("reading")
     folder = repo.path("readings", reading_id)
     folder.mkdir()
-    (folder / "input.png").write_bytes(raw)
+    (folder / request["image_file"]).write_bytes(raw)
     write_json(folder / "request.json", request)
-    record = {"id": reading_id, "format_version": 1, "artwork_id": request["artwork_id"],
+    record = {"id": reading_id, "format_version": 1, "object_id": request["object_id"],
+              "canonical_asset_id": request["canonical_asset_id"], "image_file": request["image_file"],
               "stage": request["stage"], "model": request["model"],
               "parent_reading_id": request["parent_reading_id"], "created_at": now(),
               "request_sha256": approved_token, "status": "requested",
@@ -115,7 +118,7 @@ class OpenAIProvider:
                 input=[{"role": "user", "content": [
                     {"type": "input_text", "text": request["input_text"]},
                     {"type": "input_image", "detail": request["image_detail"],
-                     "image_url": "data:image/png;base64," + base64.b64encode(image).decode("ascii")},
+                     "image_url": f"data:{request['image_mime']};base64," + base64.b64encode(image).decode("ascii")},
                 ]}],
                 text={"format": {"type": "json_schema", "name": "visual_reading",
                                   "strict": True, "schema": request["response_schema"]}},

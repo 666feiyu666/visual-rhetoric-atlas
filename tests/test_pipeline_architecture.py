@@ -3,7 +3,8 @@ import json
 import pytest
 
 from visual_rhetoric_atlas.information.bridges import object_id, parse_bridges_title
-from visual_rhetoric_atlas.information.consolidate import consolidate_records
+from visual_rhetoric_atlas.information.codebook import feature_record, load_codebook, validate_feature_record
+from visual_rhetoric_atlas.information.consolidate import build_information, consolidate_records
 from visual_rhetoric_atlas.knowledge.claims import candidate_claim
 from visual_rhetoric_atlas.knowledge.text_mining import (
     concept_cooccurrences,
@@ -72,8 +73,9 @@ def test_interpretations_become_mineable_text_units():
     units = interpretation_units(reading_id="reading_1", object_id="bridges_A01", result=result)
     assert len(units) == 2
     assert units[0]["information_ids"] == ["reading_1:o1"]
-    assert concept_frequencies(units)["circular-frame"] == 2
-    assert concept_cooccurrences(units)[("circular-frame", "female-figure")] == 2
+    assert concept_frequencies(units)["circular-frame"] == 1
+    assert concept_cooccurrences(units)[("circular-frame", "female-figure")] == 1
+    assert concept_frequencies(units, unit_of_analysis="interpretation_unit")["circular-frame"] == 2
 
 
 def test_candidate_claims_require_traceable_corpus_evidence():
@@ -87,3 +89,42 @@ def test_candidate_claims_require_traceable_corpus_evidence():
     assert claim["information_ids"] == ["i1"]
     assert claim["interpretation_unit_ids"] == ["u1"]
     assert claim["epistemic_status"] == "candidate_knowledge"
+
+
+def visual_features():
+    return {
+        "figure_presence": "present", "figure_count": 1,
+        "dominant_figure_position": "center", "gaze_direction": "right",
+        "framing": "circular", "ornament_presence": "present",
+        "ornament_motifs": ["floral"], "text_presence": "present",
+        "text_regions": ["bottom"], "composition_axis": "vertical",
+        "symmetry": "approx_bilateral", "product_presence": "absent",
+        "image_text_relation": "separate_zones",
+    }
+
+
+def test_visual_information_codebook_is_versioned_and_evidence_linked():
+    assert load_codebook()["version"] == 1
+    assert "color" not in load_codebook()["features"]
+    record = feature_record(
+        information_record_id="vf_1", object_id="bridges_1980_a01",
+        annotator={"type": "human", "id": "reviewer_1", "method": "manual_coding"},
+        features=visual_features(),
+        evidence=[{"feature_ids": ["framing"], "description": "A circular enclosure surrounds the figure.",
+                   "bbox": [0.1, 0.1, 0.9, 0.9]}],
+        created_at="2026-09-19T00:00:00+00:00",
+    )
+    assert validate_feature_record(record, object_ids={"bridges_1980_a01"}) == record
+    invalid = json.loads(json.dumps(record))
+    invalid["features"]["figure_presence"] = "absent"
+    with pytest.raises(ValueError, match="figure_count"):
+        validate_feature_record(invalid)
+
+
+def test_information_build_rejects_missing_or_empty_manifest(tmp_path):
+    with pytest.raises(FileNotFoundError):
+        build_information(tmp_path / "missing.jsonl", tmp_path / "information")
+    empty = tmp_path / "empty.jsonl"
+    empty.write_text("", encoding="utf-8")
+    with pytest.raises(ValueError, match="empty manifest"):
+        build_information(empty, tmp_path / "information")

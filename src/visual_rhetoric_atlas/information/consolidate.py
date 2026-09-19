@@ -5,7 +5,9 @@ from pathlib import Path
 
 from ..common.files import read_jsonl, write_json, write_jsonl
 from ..common.provenance import derived_record, utc_now
+from ..data.wikimedia import verify_records
 from .bridges import object_id, parse_bridges_title
+from .codebook import load_codebook, load_feature_schema
 
 
 def asset_record(source):
@@ -104,12 +106,27 @@ def consolidate_records(source_records):
 
 def build_information(manifest_path, output_dir):
     manifest_path, output_dir = Path(manifest_path), Path(output_dir)
+    if not manifest_path.is_file():
+        raise FileNotFoundError(f"Manifest does not exist: {manifest_path}")
     source = read_jsonl(manifest_path)
+    if not source:
+        raise ValueError("Refusing to replace Information outputs from an empty manifest.")
+    invalid = [item["commons_title"] for item in source
+               if item.get("download_status") not in {"downloaded", "existing_verified"}]
+    if invalid:
+        raise ValueError(f"Manifest contains {len(invalid)} unavailable assets; verify Data first.")
+    integrity = verify_records(manifest_path.parent, source)
+    if not integrity["complete"]:
+        raise ValueError(
+            f"Data integrity failed for {len(integrity['issues'])} assets; run data download or verify."
+        )
     assets, objects, review = consolidate_records(source)
     output_dir.mkdir(parents=True, exist_ok=True)
     write_jsonl(output_dir / "assets.jsonl", assets, sort_key=lambda item: item["asset_id"])
     write_jsonl(output_dir / "objects.jsonl", objects, sort_key=lambda item: item["catalogue_code"])
     write_jsonl(output_dir / "review_queue.jsonl", review, sort_key=lambda item: item["review_id"])
+    write_json(output_dir / "visual_features.codebook.json", load_codebook())
+    write_json(output_dir / "visual_feature_record.schema.json", load_feature_schema())
     counts = Counter(
         variant["relation"] for item in objects for variant in item["asset_variants"]
     )
@@ -123,8 +140,8 @@ def build_information(manifest_path, output_dir):
         "asset_count": len(assets),
         "object_count": len(objects),
         "review_queue_count": len(review),
+        "available_information_codebooks": [{"codebook_id": "visual_features", "version": 1}],
         "variant_relations": dict(sorted(counts.items())),
     }
     write_json(output_dir / "summary.json", summary)
     return summary
-

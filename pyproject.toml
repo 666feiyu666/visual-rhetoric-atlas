@@ -19,7 +19,11 @@ dev = ["pytest>=8,<10"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-visual_rhetoric_atlas = ["knowledge/resources/prompts/*.md", "knowledge/resources/schemas/*.json"]
+visual_rhetoric_atlas = [
+  "information/resources/*.json",
+  "knowledge/resources/prompts/*.md",
+  "knowledge/resources/schemas/*.json",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

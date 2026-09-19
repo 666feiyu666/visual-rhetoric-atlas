@@ -1,9 +1,7 @@
-/data/
 /corpus/
 /.venv/
 /.env
 /.env.local
-/.streamlit/secrets.toml
 __pycache__/
 *.py[cod]
 *.egg-info/

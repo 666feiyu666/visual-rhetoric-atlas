@@ -46,7 +46,8 @@ def main(argv=None):
         client = CommonsClient(contact=args.contact, timeout=args.timeout, retries=args.retries)
         if args.command in {"discover", "refresh"}:
             records = discover(client, output, category=args.category, limit=args.limit,
-                               existing_dir=args.existing_dir.resolve())
+                               existing_dir=args.existing_dir.resolve(),
+                               refresh=args.command == "refresh")
         else:
             records = download_records(client, output)
     counts = {}

@@ -56,14 +56,26 @@ def interpretation_units(*, reading_id, object_id, result, source_type="model_re
     return units
 
 
-def concept_frequencies(units):
-    return Counter(term for unit in units for term in set(unit.get("concept_terms", [])))
-
-
-def concept_cooccurrences(units):
-    counts = Counter()
+def grouped_concepts(units, unit_of_analysis="object"):
+    """Return one concept set per object, reading, or interpretation unit."""
+    if unit_of_analysis == "interpretation_unit":
+        return [set(unit.get("concept_terms", [])) for unit in units]
+    if unit_of_analysis not in {"object", "reading"}:
+        raise ValueError("unit_of_analysis must be object, reading, or interpretation_unit")
+    key = "object_id" if unit_of_analysis == "object" else "reading_id"
+    groups = {}
     for unit in units:
-        terms = sorted(set(unit.get("concept_terms", [])))
+        groups.setdefault(unit[key], set()).update(unit.get("concept_terms", []))
+    return list(groups.values())
+
+
+def concept_frequencies(units, *, unit_of_analysis="object"):
+    return Counter(term for terms in grouped_concepts(units, unit_of_analysis) for term in terms)
+
+
+def concept_cooccurrences(units, *, unit_of_analysis="object"):
+    counts = Counter()
+    for concepts in grouped_concepts(units, unit_of_analysis):
+        terms = sorted(concepts)
         counts.update(combinations(terms, 2))
     return counts
-

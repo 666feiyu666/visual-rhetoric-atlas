@@ -15,14 +15,14 @@ from urllib.request import Request, urlopen
 
 from PIL import Image
 
-from ..common.files import atomic_text, read_jsonl, replace_with_retry, write_csv, write_json, write_jsonl
+from ..common.files import atomic_text, read_json, read_jsonl, replace_with_retry, write_csv, write_json, write_jsonl
 from ..common.hashing import digest_file
 from ..common.provenance import utc_now
 
 
 API_ENDPOINT = "https://commons.wikimedia.org/w/api.php"
 DEFAULT_CATEGORY = "Category:Alphonse Mucha, the complete graphic works (1980)"
-DEFAULT_CONTACT = "https://github.com/666feiyu666/visual-culture-cartographer"
+DEFAULT_CONTACT = "https://github.com/666feiyu666/visual-rhetoric-atlas"
 EXTMETADATA_FIELDS = (
     "Artist|ObjectName|ImageDescription|DateTimeOriginal|Credit|Source|"
     "LicenseShortName|LicenseUrl|UsageTerms|AttributionRequired|Copyrighted"
@@ -231,10 +231,21 @@ def match_existing(records, existing_dir, output_dir):
     return records
 
 
-def discover(client, output_dir, *, category=DEFAULT_CATEGORY, limit=None, existing_dir=None):
+def discover(client, output_dir, *, category=DEFAULT_CATEGORY, limit=None, existing_dir=None,
+             refresh=False):
     output_dir = Path(output_dir)
     manifest_path = output_dir / "manifest.jsonl"
     previous = {item["commons_title"]: item for item in read_manifest(manifest_path)}
+    if previous and not refresh:
+        raise ValueError("Manifest already exists. Use refresh to update it intentionally.")
+    collection_path = output_dir / "collection.json"
+    if limit is not None and previous:
+        collection = read_json(collection_path) if collection_path.exists() else {}
+        if not collection.get("limited_discovery"):
+            raise ValueError(
+                "Refusing to replace a full manifest with a limited discovery. "
+                "Use a separate output directory for test runs."
+            )
     members = category_files(client, category, limit=limit)
     pages = metadata_pages(client, members)
     records = [record_from_page(page, previous.get(page["title"])) for page in pages]
@@ -294,6 +305,51 @@ def download_records(client, output_dir):
     return records
 
 
+def verify_records(output_dir, records=None):
+    """Verify every manifest path and hash without changing download status."""
+    output_dir = Path(output_dir)
+    records = read_manifest(output_dir / "manifest.jsonl") if records is None else records
+    if not records:
+        raise ValueError("No manifest found. Run discover first.")
+    issues = []
+    counts = Counter()
+    for record in records:
+        local_path = record.get("local_path")
+        if not local_path:
+            state, detail = "unavailable", "Manifest record has no local_path"
+        else:
+            path = (output_dir / local_path).resolve()
+            if not path.is_file():
+                state, detail = "missing", f"Local file does not exist: {local_path}"
+            else:
+                try:
+                    local_sha1, local_sha256 = validate_file(path, record)
+                    if record.get("local_sha256") and local_sha256 != record["local_sha256"]:
+                        raise ValueError("SHA-256 mismatch")
+                    state, detail = "valid", ""
+                except (OSError, ValueError) as exc:
+                    state, detail = "corrupt", f"{type(exc).__name__}: {exc}"
+        counts[state] += 1
+        if state != "valid":
+            issues.append({
+                "commons_page_id": record.get("commons_page_id"),
+                "commons_title": record.get("commons_title", ""),
+                "local_path": local_path or "",
+                "state": state,
+                "detail": detail,
+            })
+    report = {
+        "format_version": 1,
+        "generated_at": utc_now(),
+        "total": len(records),
+        "counts": dict(sorted(counts.items())),
+        "complete": not issues,
+        "issues": issues,
+    }
+    write_json(output_dir / "reports" / "integrity.json", report)
+    return report
+
+
 def write_reports(output_dir, records):
     output_dir = Path(output_dir)
     reports = output_dir / "reports"
@@ -316,4 +372,3 @@ def write_reports(output_dir, records):
     write_csv(reports / "duplicates.csv", ["commons_sha1", "count", "titles"], duplicate_rows)
     failure_rows = [[item["commons_page_id"], item["commons_title"], item.get("error", "")] for item in records if item.get("download_status") in {"failed", "metadata_failed"}]
     write_csv(reports / "failures.csv", ["page_id", "title", "error"], failure_rows)
-
